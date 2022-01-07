@@ -53,8 +53,9 @@ jobs:
         # _gh-pages/branch-* paths, and not including
         # _gh-pages itself.
         find _gh-pages/ -mindepth 1 ! -path '_gh-pages/branch*' -delete
+        cd _build
         ls
-        ls _build
+        cd ..
         rsync -a _build/ _gh-pages
     # If a push and not on default branch, then copy the build to
     # _gh-pages/branch/$brname (transforming '/' into '--')
