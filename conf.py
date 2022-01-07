@@ -35,8 +35,8 @@ extensions = [
     'sphinxext.opengraph',
 ]
 
-blog_title = 'Read the Docs Blog'
-blog_baseurl = 'https://blog.readthedocs.com'
+blog_title = 'BioCurious DIY BioPrinting blog'
+blog_baseurl = 'https://biocurious-diy-bio-printing.github.io/blog/'
 blog_path = 'archive'
 fontawesome_link_cdn = 'https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css'
 # fontawesome_included = True
@@ -53,8 +53,9 @@ blog_authors = {
     'Vaibhav': ('Vaibhav Gupta', 'https://github.com/dojutsu-user'),
     'Manuel': ('Manuel Kaufmann', 'https://elblogdehumitos.com/'),
     'Juan Luis': ('Juan Luis Cano Rodríguez', 'https://github.com/astrojuanlu/'),
+    'Axel': ('Axel Sepúlveda', 'https://github.com/chepo92/'),
 }
-blog_default_author = 'Eric'
+blog_default_author = 'Axel'
 
 blog_locations = {
     'PDX': ('Portland, Oregon', 'http://www.portlandhikersfieldguide.org/'),
@@ -167,7 +168,7 @@ html_theme_options = {
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = 'Read the Docs Blog'
+html_title = 'BioCurious DIY BioPrinting Blog'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
