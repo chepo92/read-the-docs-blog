@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">Read the Docs Blog - Posts from Spokane, Washington</title>
+  <id>https://chepo92.github.io/read-the-docs-blog/archive/location/spokane-washington/atom.xml</id>
+  <updated>2021-11-02T00:00:00Z</updated>
+  <link href="https://chepo92.github.io/read-the-docs-blog/" />
+  <link href="https://chepo92.github.io/read-the-docs-blog/archive/location/spokane-washington/atom.xml" rel="self" />
+  <generator uri="http://ablog.readthedocs.org" version="0.9.5">ABlog</generator>
+  <entry xml:base="https://chepo92.github.io/read-the-docs-blog/archive/location/spokane-washington/atom.xml">
+    <title type="text">Build errors with docutils 0.18</title>
+    <id>https://chepo92.github.io/read-the-docs-blog/build-errors-docutils-0-18.html</id>
+    <updated>2021-11-02T00:00:00Z</updated>
+    <published>2021-11-02T00:00:00Z</published>
+    <link href="https://chepo92.github.io/read-the-docs-blog/build-errors-docutils-0-18.html" />
+    <author>
+      <name>Anthony Johnson</name>
+    </author>
+    <content type="html">&lt;div class=&quot;section&quot; id=&quot;build-errors-with-docutils-0-18&quot;&gt;
+
+&lt;p&gt;Starting about a week ago, some users started reporting new errors with
+their project builds. In most cases, these errors appeared out of nowhere and
+are usually rather cryptic errors referencing &lt;a class=&quot;reference external&quot; href=&quot;https://pypi.org/project/Sphinx/&quot;&gt;Sphinx&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;https://pypi.org/project/docutils/&quot;&gt;docutils&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;So, what is happening?&lt;/p&gt;
+&lt;p&gt;These errors are due to an incompatibility bewteen old versions of &lt;a class=&quot;reference external&quot; href=&quot;https://pypi.org/project/Sphinx/&quot;&gt;Sphinx&lt;/a&gt; and
+one of its dependencies, &lt;a class=&quot;reference external&quot; href=&quot;https://pypi.org/project/docutils/&quot;&gt;docutils&lt;/a&gt;. You probably have not directly interacted
+with docutils, but this is the library that provides reStructuredText parsing to
+both Sphinx and to the Python standard library documentation tooling.&lt;/p&gt;
+&lt;p&gt;There are a number of errors that users have reported due to this
+incompatibility, but the most common error is:&lt;/p&gt;
+&lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;ne&quot;&gt;TypeError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;generator&amp;#39;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;subscriptable&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;If your project’s builds suddenly start failing with the above error message, or
+other cryptic errors that don’t seem related to your project, your project is
+most likely encountering this bug.&lt;/p&gt;
+&lt;div class=&quot;section&quot; id=&quot;why-is-this-happening&quot;&gt;
+&lt;h2&gt;Why is this happening?&lt;/h2&gt;
+&lt;p&gt;The underlying cause for this error is using an outdated version of &lt;a class=&quot;reference external&quot; href=&quot;https://pypi.org/project/Sphinx/&quot;&gt;Sphinx&lt;/a&gt;
+(version &amp;lt; 3.0) with the latest release of &lt;a class=&quot;reference external&quot; href=&quot;https://pypi.org/project/docutils/&quot;&gt;docutils&lt;/a&gt; (version 0.18,
+released October 26). This latest release of docutils is no longer comptible
+with Sphinx versions 1.x and 2.x, however these versions do not specify a upper
+limit to the version of docutils installed, and so will install the latest
+release by default.&lt;/p&gt;
+&lt;p&gt;The reason so many projects use an old version of Sphinx
+is that, &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/builds.html#external-dependencies&quot; title=&quot;(in Read the Docs user documentation v6.3.2)&quot;&gt;&lt;span class=&quot;xref std std-ref&quot;&gt;before October 2020, Read the Docs had a more strict pinning
+policy&lt;/span&gt;&lt;/a&gt;
+and Sphinx 1.8 was the default version.
+New projects are not affected.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;fixing-the-error&quot;&gt;
+&lt;h2&gt;Fixing the error&lt;/h2&gt;
+&lt;p&gt;We have proposed to the &lt;a class=&quot;reference external&quot; href=&quot;https://pypi.org/project/Sphinx/&quot;&gt;Sphinx&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;https://pypi.org/project/docutils/&quot;&gt;docutils&lt;/a&gt; maintainers
+&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/sphinx-doc/sphinx/issues/9807&quot;&gt;a solution that doesn’t involve manual intervention&lt;/a&gt;.
+However, for now we suggest you manually
+resolve this issue for any of your projects that have encountered the bug.&lt;/p&gt;
+&lt;p&gt;There are two ways to resolve this issue:&lt;/p&gt;
+&lt;dl class=&quot;docutils&quot;&gt;
+&lt;dt&gt;Upgrade &lt;a class=&quot;reference external&quot; href=&quot;https://pypi.org/project/Sphinx/&quot;&gt;Sphinx&lt;/a&gt; to version 3 or later&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;We recommend this option for most users. If your project doesn’t
+specifically still require Sphinx 1.x or 2.x, your project can most likely
+be upgraded, without issues, to a modern version of Sphinx. As a bonus,
+you’ll be able to use the latest Sphinx releases and extensions that only
+support modern Sphinx releases.&lt;/p&gt;
+&lt;p&gt;It is worth noting that one reason why you might still be using an old
+version of Sphinx is if you generate API documentation for Python 2
+compatible code. In this case, you’ll have more work ahead of you in order
+to upgrade, as Sphinx version 3 and 4 only support Python 3.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt&gt;Downgrade &lt;a class=&quot;reference external&quot; href=&quot;https://pypi.org/project/docutils/&quot;&gt;docutils&lt;/a&gt;&lt;/dt&gt;&lt;dd&gt;This is the next best option if you can’t immediately upgrade Sphinx. If you
+are familiar with Python packaging, the best specifier to use is
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;docutils&amp;lt;0.18&lt;/span&gt;&lt;/code&gt;.&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;fixing-the-error-on-read-the-docs&quot;&gt;
+&lt;h2&gt;Fixing the error on Read the Docs&lt;/h2&gt;
+&lt;p&gt;If you aren’t already, you should add a &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/config-file/v2.html&quot; title=&quot;(in Read the Docs user documentation v6.3.2)&quot;&gt;&lt;span class=&quot;xref std std-doc&quot;&gt;configuration file&lt;/span&gt;&lt;/a&gt;
+for your project, so that you can specify additional dependencies to install at
+build time. There are a few supported methods for installation, depending on how
+you normally install dependencies for your project. If you are not currently
+specifying any dependencies on Read the Docs, you most likely will want to use
+the &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/config-file/v2.html#requirements-file&quot; title=&quot;(in Read the Docs user documentation v6.3.2)&quot;&gt;&lt;span class=&quot;xref std std-ref&quot;&gt;python.install.requirements&lt;/span&gt;&lt;/a&gt; configuration option.&lt;/p&gt;
+&lt;p&gt;This is how the reference &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;.readthedocs.yaml&lt;/span&gt;&lt;/code&gt; and &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;docs/requirements.txt&lt;/span&gt;&lt;/code&gt; files
+would look like:&lt;/p&gt;
+&lt;div class=&quot;literal-block-wrapper docutils container&quot; id=&quot;id1&quot;&gt;
+&lt;div class=&quot;code-block-caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;.readthedocs.yaml&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight-yaml notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;l l-Scalar l-Scalar-Plain&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;python&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;install&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;p p-Indicator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;requirements&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;l l-Scalar l-Scalar-Plain&quot;&gt;docs/requirements.txt&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;literal-block-wrapper docutils container&quot; id=&quot;id2&quot;&gt;
+&lt;div class=&quot;code-block-caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;docs/requirements.txt&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;docutils&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.18&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;If you still experience problems, feel free to
+&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/readthedocs/readthedocs.org/issues/&quot;&gt;open an issue&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&quot;admonition seealso&quot;&gt;
+&lt;p class=&quot;first admonition-title&quot;&gt;See also&lt;/p&gt;
+&lt;dl class=&quot;last docutils&quot;&gt;
+&lt;dt&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/tutorial/index.html#customizing-the-build-process&quot; title=&quot;(in Read the Docs user documentation v6.3.2)&quot;&gt;&lt;span class=&quot;xref std std-ref&quot;&gt;Read the Docs tutorial&lt;/span&gt;&lt;/a&gt;&lt;/dt&gt;&lt;dd&gt;An introduction to our configuration file and some basic usage examples&lt;/dd&gt;
+&lt;dt&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/config-file/v2.html#python-install&quot; title=&quot;(in Read the Docs user documentation v6.3.2)&quot;&gt;&lt;span class=&quot;xref std std-ref&quot;&gt;.readthedocs.yaml python.install options&lt;/span&gt;&lt;/a&gt;&lt;/dt&gt;&lt;dd&gt;All of the supported Python dependency installation options&lt;/dd&gt;
+&lt;dt&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/readthedocs/readthedocs.org/issues/8616&quot;&gt;https://github.com/readthedocs/readthedocs.org/issues/8616&lt;/a&gt;&lt;/dt&gt;&lt;dd&gt;An example stack trace of this bug and discussion around resolving the
+error&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+</feed>

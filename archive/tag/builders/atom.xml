@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">Read the Docs Blog - Posts tagged builders</title>
+  <id>https://chepo92.github.io/read-the-docs-blog/archive/tag/builders/atom.xml</id>
+  <updated>2021-11-02T00:00:00Z</updated>
+  <link href="https://chepo92.github.io/read-the-docs-blog/" />
+  <link href="https://chepo92.github.io/read-the-docs-blog/archive/tag/builders/atom.xml" rel="self" />
+  <generator uri="http://ablog.readthedocs.org" version="0.9.5">ABlog</generator>
+  <entry xml:base="https://chepo92.github.io/read-the-docs-blog/archive/tag/builders/atom.xml">
+    <title type="text">Build errors with docutils 0.18</title>
+    <id>https://chepo92.github.io/read-the-docs-blog/build-errors-docutils-0-18.html</id>
+    <updated>2021-11-02T00:00:00Z</updated>
+    <published>2021-11-02T00:00:00Z</published>
+    <link href="https://chepo92.github.io/read-the-docs-blog/build-errors-docutils-0-18.html" />
+    <author>
+      <name>Anthony Johnson</name>
+    </author>
+    <content type="html">&lt;div class=&quot;section&quot; id=&quot;build-errors-with-docutils-0-18&quot;&gt;
+
+&lt;p&gt;Starting about a week ago, some users started reporting new errors with
+their project builds. In most cases, these errors appeared out of nowhere and
+are usually rather cryptic errors referencing &lt;a class=&quot;reference external&quot; href=&quot;https://pypi.org/project/Sphinx/&quot;&gt;Sphinx&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;https://pypi.org/project/docutils/&quot;&gt;docutils&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;So, what is happening?&lt;/p&gt;
+&lt;p&gt;These errors are due to an incompatibility bewteen old versions of &lt;a class=&quot;reference external&quot; href=&quot;https://pypi.org/project/Sphinx/&quot;&gt;Sphinx&lt;/a&gt; and
+one of its dependencies, &lt;a class=&quot;reference external&quot; href=&quot;https://pypi.org/project/docutils/&quot;&gt;docutils&lt;/a&gt;. You probably have not directly interacted
+with docutils, but this is the library that provides reStructuredText parsing to
+both Sphinx and to the Python standard library documentation tooling.&lt;/p&gt;
+&lt;p&gt;There are a number of errors that users have reported due to this
+incompatibility, but the most common error is:&lt;/p&gt;
+&lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;ne&quot;&gt;TypeError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;generator&amp;#39;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;subscriptable&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;If your project’s builds suddenly start failing with the above error message, or
+other cryptic errors that don’t seem related to your project, your project is
+most likely encountering this bug.&lt;/p&gt;
+&lt;div class=&quot;section&quot; id=&quot;why-is-this-happening&quot;&gt;
+&lt;h2&gt;Why is this happening?&lt;/h2&gt;
+&lt;p&gt;The underlying cause for this error is using an outdated version of &lt;a class=&quot;reference external&quot; href=&quot;https://pypi.org/project/Sphinx/&quot;&gt;Sphinx&lt;/a&gt;
+(version &amp;lt; 3.0) with the latest release of &lt;a class=&quot;reference external&quot; href=&quot;https://pypi.org/project/docutils/&quot;&gt;docutils&lt;/a&gt; (version 0.18,
+released October 26). This latest release of docutils is no longer comptible
+with Sphinx versions 1.x and 2.x, however these versions do not specify a upper
+limit to the version of docutils installed, and so will install the latest
+release by default.&lt;/p&gt;
+&lt;p&gt;The reason so many projects use an old version of Sphinx
+is that, &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/builds.html#external-dependencies&quot; title=&quot;(in Read the Docs user documentation v6.3.2)&quot;&gt;&lt;span class=&quot;xref std std-ref&quot;&gt;before October 2020, Read the Docs had a more strict pinning
+policy&lt;/span&gt;&lt;/a&gt;
+and Sphinx 1.8 was the default version.
+New projects are not affected.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;fixing-the-error&quot;&gt;
+&lt;h2&gt;Fixing the error&lt;/h2&gt;
+&lt;p&gt;We have proposed to the &lt;a class=&quot;reference external&quot; href=&quot;https://pypi.org/project/Sphinx/&quot;&gt;Sphinx&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;https://pypi.org/project/docutils/&quot;&gt;docutils&lt;/a&gt; maintainers
+&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/sphinx-doc/sphinx/issues/9807&quot;&gt;a solution that doesn’t involve manual intervention&lt;/a&gt;.
+However, for now we suggest you manually
+resolve this issue for any of your projects that have encountered the bug.&lt;/p&gt;
+&lt;p&gt;There are two ways to resolve this issue:&lt;/p&gt;
+&lt;dl class=&quot;docutils&quot;&gt;
+&lt;dt&gt;Upgrade &lt;a class=&quot;reference external&quot; href=&quot;https://pypi.org/project/Sphinx/&quot;&gt;Sphinx&lt;/a&gt; to version 3 or later&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;We recommend this option for most users. If your project doesn’t
+specifically still require Sphinx 1.x or 2.x, your project can most likely
+be upgraded, without issues, to a modern version of Sphinx. As a bonus,
+you’ll be able to use the latest Sphinx releases and extensions that only
+support modern Sphinx releases.&lt;/p&gt;
+&lt;p&gt;It is worth noting that one reason why you might still be using an old
+version of Sphinx is if you generate API documentation for Python 2
+compatible code. In this case, you’ll have more work ahead of you in order
+to upgrade, as Sphinx version 3 and 4 only support Python 3.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt&gt;Downgrade &lt;a class=&quot;reference external&quot; href=&quot;https://pypi.org/project/docutils/&quot;&gt;docutils&lt;/a&gt;&lt;/dt&gt;&lt;dd&gt;This is the next best option if you can’t immediately upgrade Sphinx. If you
+are familiar with Python packaging, the best specifier to use is
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;docutils&amp;lt;0.18&lt;/span&gt;&lt;/code&gt;.&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;fixing-the-error-on-read-the-docs&quot;&gt;
+&lt;h2&gt;Fixing the error on Read the Docs&lt;/h2&gt;
+&lt;p&gt;If you aren’t already, you should add a &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/config-file/v2.html&quot; title=&quot;(in Read the Docs user documentation v6.3.2)&quot;&gt;&lt;span class=&quot;xref std std-doc&quot;&gt;configuration file&lt;/span&gt;&lt;/a&gt;
+for your project, so that you can specify additional dependencies to install at
+build time. There are a few supported methods for installation, depending on how
+you normally install dependencies for your project. If you are not currently
+specifying any dependencies on Read the Docs, you most likely will want to use
+the &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/config-file/v2.html#requirements-file&quot; title=&quot;(in Read the Docs user documentation v6.3.2)&quot;&gt;&lt;span class=&quot;xref std std-ref&quot;&gt;python.install.requirements&lt;/span&gt;&lt;/a&gt; configuration option.&lt;/p&gt;
+&lt;p&gt;This is how the reference &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;.readthedocs.yaml&lt;/span&gt;&lt;/code&gt; and &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;docs/requirements.txt&lt;/span&gt;&lt;/code&gt; files
+would look like:&lt;/p&gt;
+&lt;div class=&quot;literal-block-wrapper docutils container&quot; id=&quot;id1&quot;&gt;
+&lt;div class=&quot;code-block-caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;.readthedocs.yaml&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight-yaml notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;l l-Scalar l-Scalar-Plain&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;python&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;install&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;p p-Indicator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;requirements&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;l l-Scalar l-Scalar-Plain&quot;&gt;docs/requirements.txt&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;literal-block-wrapper docutils container&quot; id=&quot;id2&quot;&gt;
+&lt;div class=&quot;code-block-caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;docs/requirements.txt&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;docutils&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.18&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;If you still experience problems, feel free to
+&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/readthedocs/readthedocs.org/issues/&quot;&gt;open an issue&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&quot;admonition seealso&quot;&gt;
+&lt;p class=&quot;first admonition-title&quot;&gt;See also&lt;/p&gt;
+&lt;dl class=&quot;last docutils&quot;&gt;
+&lt;dt&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/tutorial/index.html#customizing-the-build-process&quot; title=&quot;(in Read the Docs user documentation v6.3.2)&quot;&gt;&lt;span class=&quot;xref std std-ref&quot;&gt;Read the Docs tutorial&lt;/span&gt;&lt;/a&gt;&lt;/dt&gt;&lt;dd&gt;An introduction to our configuration file and some basic usage examples&lt;/dd&gt;
+&lt;dt&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/config-file/v2.html#python-install&quot; title=&quot;(in Read the Docs user documentation v6.3.2)&quot;&gt;&lt;span class=&quot;xref std std-ref&quot;&gt;.readthedocs.yaml python.install options&lt;/span&gt;&lt;/a&gt;&lt;/dt&gt;&lt;dd&gt;All of the supported Python dependency installation options&lt;/dd&gt;
+&lt;dt&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/readthedocs/readthedocs.org/issues/8616&quot;&gt;https://github.com/readthedocs/readthedocs.org/issues/8616&lt;/a&gt;&lt;/dt&gt;&lt;dd&gt;An example stack trace of this bug and discussion around resolving the
+error&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry xml:base="https://chepo92.github.io/read-the-docs-blog/archive/tag/builders/atom.xml">
+    <title type="text">Ubuntu 20.04, Python 3.10, and support for Node, Rust, and Go</title>
+    <id>https://chepo92.github.io/read-the-docs-blog/new-build-specification.html</id>
+    <updated>2021-10-14T00:00:00Z</updated>
+    <published>2021-10-14T00:00:00Z</published>
+    <link href="https://chepo92.github.io/read-the-docs-blog/new-build-specification.html" />
+    <author>
+      <name>Juan Luis Cano Rodríguez</name>
+    </author>
+    <content type="html">&lt;div class=&quot;section&quot; id=&quot;ubuntu-20-04-python-3-10-and-support-for-node-rust-and-go&quot;&gt;
+
+&lt;p&gt;We are excited to announce that now Read the Docs users
+can use a newer build specification in their projects
+that will change the base image to one based on Ubuntu 20.04,
+ship the recently released Python 3.10,
+and allow users to easily specify the version of Node.js, Rust, and Go.
+This feature has been a long time in the making,
+and we think it will simplify the configuration of many projects.&lt;/p&gt;
+&lt;div class=&quot;section&quot; id=&quot;previous-situation&quot;&gt;
+&lt;h2&gt;Previous situation&lt;/h2&gt;
+&lt;p&gt;The Docker images used by our builders were based on Ubuntu 18.04.
+Recently, we added a new feature to &lt;a class=&quot;reference internal&quot; href=&quot;../../apt-packages.html&quot;&gt;&lt;span class=&quot;doc&quot;&gt;install custom system packages&lt;/span&gt;&lt;/a&gt;,
+which allowed many projects to have better control of their build process
+without having to use conda to manage non-Python dependencies.&lt;/p&gt;
+&lt;p&gt;However, this Ubuntu version was released three years ago and,
+even though it was good enough for most projects,
+we have been receiving requests to upgrade certain system packages over the years.
+Since these are managed through the operating system package manager,
+and we do not provide a way to add custom Personal Package Archives,
+such upgrades were not possible.&lt;/p&gt;
+&lt;p&gt;Many Python projects use a secondary programming language
+for a variety of reasons. Established compiled languages like C, C++, and FORTRAN
+have readily available compilers that will work for the majority of use cases.
+However, other younger technologies move at a faster pace,
+and developers often want specific versions of the toolchains
+that cannot be installed with the system package manager.
+This affected projects that combine backend and frontend code
+that need Node.js to compile their JavaScript sources, such as Jupyter extensions,
+and libraries with performance-critical code written in Rust or Go.&lt;/p&gt;
+&lt;p&gt;We have often suggested specifying custom versions of non-Python dependencies
+&lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/guides/conda.html&quot;&gt;using conda&lt;/a&gt;,
+to specify custom versions of non-Python dependencies,
+but this requires learning another tool that might be unfamiliar for some projects.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;new-build-yaml-configuration&quot;&gt;
+&lt;h2&gt;New &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;build&lt;/span&gt;&lt;/code&gt; YAML configuration&lt;/h2&gt;
+&lt;p&gt;To overcome all these problems, we have added a new configuration value,
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;build.tools&lt;/span&gt;&lt;/code&gt;, that receive a dictionary of toolchain versions.
+This new configuration requires specifying the base image name
+in &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;build.os&lt;/span&gt;&lt;/code&gt;, currently &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ubuntu-20.04&lt;/span&gt;&lt;/code&gt;.
+&lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/config-file/v2.html&quot; title=&quot;(in Read the Docs user documentation v6.3.2)&quot;&gt;&lt;span class=&quot;xref std std-doc&quot;&gt;Our configuration documentation&lt;/span&gt;&lt;/a&gt;
+contains a simple example:&lt;/p&gt;
+&lt;div class=&quot;highlight-yaml notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;l l-Scalar l-Scalar-Plain&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Set the version of Python and other tools you might need&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;l l-Scalar l-Scalar-Plain&quot;&gt;ubuntu-20.04&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;tools&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;python&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;3.9&amp;quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# You can also specify other tool versions:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# nodejs: &amp;quot;16&amp;quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# rust: &amp;quot;1.55&amp;quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# golang: &amp;quot;1.17&amp;quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;And you can draw inspiration from some community projects
+that are using this feature already:&lt;/p&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://cryptography.io/&quot;&gt;cryptography&lt;/a&gt;, the reference Python library for cryptographic algorithms,
+can now &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/pyca/cryptography/blob/c3fcc6759a86bbd847e3da067152ee7d2b88c194/.readthedocs.yml#L10-L15&quot;&gt;specify the Rust version required to build the
+package&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://parsel.readthedocs.io/&quot;&gt;parsel&lt;/a&gt;, a Python library to manipulate HTML and XML using XPath and CSS selectors,
+leverages the new specification to &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/scrapy/parsel/blob/eb4657934cddb8b44726cda7893852c925bcda3a/.readthedocs.yml#L6-L11&quot;&gt;build their documentation on the just released
+Python 3.10&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://thebe.readthedocs.io/&quot;&gt;Thebe&lt;/a&gt;, a Jupyter-powered tool to make HTML pages interactive,
+&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/executablebooks/thebe/pull/472&quot;&gt;needs Node.js to build the latest version of the code&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Do you think this feature will be useful for you as well?
+Give it a try and let us know.&lt;/p&gt;
+&lt;p&gt;Remember you can always see the latest changes to our platforms in our &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/page/changelog.html&quot;&gt;Read the Docs
+Changelog&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;—&lt;/p&gt;
+&lt;p&gt;Considering using Read the Docs for your next Sphinx or MkDocs project?
+Check out &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/&quot;&gt;our documentation&lt;/a&gt; to get started!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry xml:base="https://chepo92.github.io/read-the-docs-blog/archive/tag/builders/atom.xml">
+    <title type="text">Install custom operating system packages (apt)</title>
+    <id>https://chepo92.github.io/read-the-docs-blog/apt-packages.html</id>
+    <updated>2021-05-19T00:00:00Z</updated>
+    <published>2021-05-19T00:00:00Z</published>
+    <link href="https://chepo92.github.io/read-the-docs-blog/apt-packages.html" />
+    <author>
+      <name>Juan Luis Cano Rodríguez</name>
+    </author>
+    <content type="html">&lt;div class=&quot;section&quot; id=&quot;install-custom-operating-system-packages-apt&quot;&gt;
+
+&lt;p&gt;We are thrilled to announce that now Read the Docs users
+can declare custom operating system packages in their project configuration
+that will get installed in our Ubuntu-based builders using &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;apt&lt;/span&gt;&lt;/code&gt;.
+This has been a long awaited feature,
+and we think it will simplify the configuration of many projects,
+especially scientific ones.&lt;/p&gt;
+&lt;div class=&quot;section&quot; id=&quot;previous-solutions&quot;&gt;
+&lt;h2&gt;Previous solutions&lt;/h2&gt;
+&lt;p&gt;The Ubuntu images used by our builders
+contain &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/readthedocs/readthedocs-docker-images/blob/8e4f035c219307e30f5e3326c3c8271cee4f2631/Dockerfile#L15-L131&quot;&gt;lots of preinstalled system
+packages&lt;/a&gt;
+that we ship to all the projects
+to make the most common use cases possible.
+This includes compilers, development headers of common libraries, and others.&lt;/p&gt;
+&lt;p&gt;However, on one hand this makes our images way bigger than necessary,
+and it is still not enough to solve 100 % of the use cases.
+Fortunately, Read the Docs has supported the &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/guides/conda.html&quot;&gt;conda package
+manager&lt;/a&gt;
+for a long time already,
+and this has allowed users with special needs to add
+any non-Python libraries they needed.
+Still, interoperability between conda and pip is not perfect,
+and for users that are not used to conda this could feel like a hack.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;new-apt-packages-configuration&quot;&gt;
+&lt;h2&gt;New &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;apt_packages&lt;/span&gt;&lt;/code&gt; configuration&lt;/h2&gt;
+&lt;p&gt;To overcome all these problems, we have added a new configuration value,
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;build.apt_packages&lt;/span&gt;&lt;/code&gt;, that receive a list of APT packages
+that will be installed in our Ubuntu-based images.
+&lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/config-file/v2.html#build-apt-packages&quot;&gt;Our configuration
+documentation&lt;/a&gt;
+contains a simple example:&lt;/p&gt;
+&lt;div class=&quot;highlight-yaml notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;l l-Scalar l-Scalar-Plain&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;l l-Scalar l-Scalar-Plain&quot;&gt;latest&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;apt_packages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;p p-Indicator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;l l-Scalar l-Scalar-Plain&quot;&gt;libclang&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;p p-Indicator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;l l-Scalar l-Scalar-Plain&quot;&gt;cmake&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;(Notice that at the moment our images are based Ubuntu 18.04,
+this will change in the near future)&lt;/p&gt;
+&lt;p&gt;And you can draw inspiration from some community projects that are using this feature already:&lt;/p&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://geoserver-rest.readthedocs.io/&quot;&gt;geoserver-rest&lt;/a&gt;, a Python library to interact with GeoServer, uses &lt;cite&gt;apt_packages&lt;/cite&gt;
+to &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/gicait/geoserver-rest/blob/70ec799937b18ec7baed6fd3f7b2bf2f11dd8237/.readthedocs.yaml#L3-L12&quot;&gt;install some GDAL and pycurl
+dependencies&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://ucx-py.readthedocs.io/&quot;&gt;UCX-Py&lt;/a&gt;, a Python interface for the low-level networking library UCX,
+&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/rapidsai/ucx-py/blob/504ba8efecafaf48b5a2692113b8da70f8229721/.readthedocs.yml#L3-L6&quot;&gt;installs extra dependencies to temporarily work around upstream
+issues&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We are happy that this feature is already being used
+minutes after being deployed
+and are looking forward to seeing more projects make use of it.&lt;/p&gt;
+&lt;p&gt;Remember you can always see the latest changes to our platforms in our &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/page/changelog.html&quot;&gt;Read the Docs
+Changelog&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;https://ethical-ad-server.readthedocs.io/page/developer/changelog.html&quot;&gt;Ethical Ad Server
+Changelog&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Considering using Read the Docs for your next Sphinx or MkDocs project?
+Check out &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/&quot;&gt;our documentation&lt;/a&gt; to get started!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry xml:base="https://chepo92.github.io/read-the-docs-blog/archive/tag/builders/atom.xml">
+    <title type="text">Better support for scientific project documentation</title>
+    <id>https://chepo92.github.io/read-the-docs-blog/better-conda-support.html</id>
+    <updated>2020-04-28T00:00:00Z</updated>
+    <published>2020-04-28T00:00:00Z</published>
+    <link href="https://chepo92.github.io/read-the-docs-blog/better-conda-support.html" />
+    <author>
+      <name>Manuel Kaufmann</name>
+    </author>
+    <content type="html">&lt;div class=&quot;section&quot; id=&quot;better-support-for-scientific-project-documentation&quot;&gt;
+
+&lt;p&gt;In the past year, we’ve been having issues when building projects’ documentation using &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;conda&lt;/span&gt;&lt;/code&gt;.
+Our build servers were running out of memory and failing projects’ builds.
+Read the Docs has this memory constraint to avoid misuse of the platform,
+causing a poor experience for other users.&lt;/p&gt;
+&lt;p&gt;Our first solution was a dedicated server for these kind of projects.
+We would manually assign them to this server on user requests.
+This workaround worked okay, but it involves a bad experience for the user and also us doing a manual step each time.
+Over time, we hit again the same issue of OOM, even giving all the memory available to one project to build its documentation.
+After some research, we found that &lt;a class=&quot;reference external&quot; href=&quot;https://www.anaconda.com/understanding-and-improving-condas-performance/&quot;&gt;this is a known issue in the conda community&lt;/a&gt; and there are some different attempts to fix it (like &lt;a class=&quot;reference external&quot; href=&quot;https://quantstack.net/mamba.html&quot;&gt;mamba&lt;/a&gt;).
+Unfortunately, none of them became the standard yet and the problem is still there.&lt;/p&gt;
+&lt;p&gt;Meanwhile, in another completely different set of work,
+we were migrating all of our infrastructure to a different architecture:&lt;/p&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;Azure &lt;em&gt;Virtual machine scale sets&lt;/em&gt; for autoscaling our servers,&lt;/li&gt;
+&lt;li&gt;Azure &lt;em&gt;storage accounts&lt;/em&gt; to store all the user’s documentation&lt;/li&gt;
+&lt;li&gt;Proxito, an internal service to remove a lot of the state from our servers (more about this migration coming in a future post)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This helped us to &lt;em&gt;reduce costs&lt;/em&gt; and allowed us to spin up &lt;em&gt;bigger instances&lt;/em&gt; for the builders.
+We have also made some other important operational changes:&lt;/p&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;Our builders are now single-process, giving all the memory available to only one project without worrying about affecting others.&lt;/li&gt;
+&lt;li&gt;We added &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/readthedocs/readthedocs.org/blob/8e78d680d02aeba12644796b979ef62459f64932/readthedocs/builds/tasks.py#L11&quot;&gt;custom task router&lt;/a&gt; that routes small builds to small servers (3GB RAM), and big builds to larger servers (7GB RAM). This removes the need for users to ask us to upgrade their isntances.&lt;/li&gt;
+&lt;li&gt;Assigned all &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;conda&lt;/span&gt;&lt;/code&gt; projects to be built by big servers by default.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you ever had a memory issue on Read the Docs,
+we’d appreciate if you give it a try again.
+Please &lt;a class=&quot;reference external&quot; href=&quot;mailto:support&amp;#37;&amp;#52;&amp;#48;readthedocs&amp;#46;org&quot;&gt;let us know&lt;/a&gt; about your experience when building scientific documentation.
+If you know that any of your friends were hitting this issue in the past,
+we encourage you to talk to them and tell them to give it a try.&lt;/p&gt;
+&lt;p&gt;We are excited to have more scientific documentation on our platform and we are doing our small part to make this happen and have better science in the world.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+</feed>

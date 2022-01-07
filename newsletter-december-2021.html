@@ -1,0 +1,361 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta content="Company updates and new features from last month, current focus, and upcoming features in December." lang="en" name="description" />
+
+  <meta property="og:title" content="Read the Docs newsletter - December 2021" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="newsletter-december-2021.html" />
+  <meta property="og:site_name" content="Read the Docs Blog" />
+  <meta property="og:description" content="Welcome to the latest edition of our monthly newsletter, where we share the most relevant updates around Read the Docs, offer a summary of new features we shipped during the previous month, and sha..." />
+  <meta property="og:image" content="https://blog.readthedocs.com/_static/logo-opengraph.png" />
+  <meta property="og:image:alt" content="Read the Docs Blog" />
+  <meta name="twitter:card" content="summary_large_image" />
+    <title>Read the Docs newsletter - December 2021 &#8212; BioCurious DIY BioPrinting Blog</title>
+    <link rel="stylesheet" href="_static/main.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  
+  <link href='//fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css' />
+  <link href='//fonts.googleapis.com/css?family=Puritan:400,400italic,700,700italic' rel='stylesheet' type='text/css' />
+  <link rel="stylesheet" href="_static/local.css" type="text/css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer data-domain="blog.readthedocs.com" src="https://plausible.io/js/plausible.js"></script>
+
+  
+  <link rel="alternate" type="application/atom+xml"  href="archive/atom.xml" title="Read the Docs Blog">
+  
+  
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+  
+  <style type="text/css">
+    ul.ablog-archive {list-style: none; overflow: auto; margin-left: 0px}
+    ul.ablog-archive li {float: left; margin-right: 5px; font-size: 80%}
+    ul.postlist a {font-style: italic;}
+    ul.postlist-style-disc {list-style-type: disc;}
+    ul.postlist-style-none {list-style-type: none;}
+    ul.postlist-style-circle {list-style-type: circle;}
+  </style>
+
+  </head><body>
+  <!-- BEGIN header -->
+  <div id="header">
+    <div class="row">
+      <div class="logo">
+        <h1><a href="index.html">
+            <img src="_static/logo.png" height="48" />
+            Read the Docs Blog
+        </a></h1>
+      </div>
+      <div class="nav">
+        <ul>
+          <li><a href="https://readthedocs.com">Back to site</a></li>
+          <li><a href="mailto:hello@readthedocs.com">Contact&nbsp;Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- END header -->
+
+  <div id="content">
+    <div class="wrapper">
+
+      <div class="col-major content">
+          
+  <div class="section" id="read-the-docs-newsletter-december-2021">
+<h1>Read the Docs newsletter - December 2021<a class="headerlink" href="#read-the-docs-newsletter-december-2021" title="Permalink to this headline">¶</a></h1>
+<p>Welcome to the latest edition of our monthly newsletter, where we
+share the most relevant updates around Read the Docs,
+offer a summary of new features we shipped
+during the previous month,
+and share what we’ll be focusing on in the near future.</p>
+<div class="section" id="company-highlights">
+<h2>Company highlights<a class="headerlink" href="#company-highlights" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>We successfully deployed mitigation measures against spam,
+and we are happy to report that the amount of abusive projects
+has dramatically decreased.</li>
+<li>We started tracking usage of different parts of our application
+in a more systematic fashion which will enable us to make
+better product design decisions going forward.</li>
+</ul>
+</div>
+<div class="section" id="new-features">
+<h2>New features<a class="headerlink" href="#new-features" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>We revamped our support for <a class="reference external" href="https://docs.readthedocs.io/en/stable/build-notifications.html" title="(in Read the Docs user documentation v6.3.2)"><span class="xref std std-doc">webhooks</span></a>:
+now they have a dedicated section in the project settings,
+you can customize the payload,
+and you can inspect the status of each webhook delivery.
+Interested in receiving build notifications on <a class="reference external" href="https://docs.readthedocs.io/en/stable/build-notifications.html#slack" title="(in Read the Docs user documentation v6.3.2)"><span class="xref std std-ref">Slack</span></a>
+or <a class="reference external" href="https://docs.readthedocs.io/en/stable/build-notifications.html#discord" title="(in Read the Docs user documentation v6.3.2)"><span class="xref std std-ref">Discord</span></a>? Now you can!</li>
+</ul>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="_images/webhooks-events.png"><img alt="Revamped webhooks" src="_images/webhooks-events.png" style="width: 80%;" /></a>
+<p class="caption"><span class="caption-text">Revamped webhooks</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li>On Read the Docs for Business, we improved our security audit logs to show information from all the organization
+according to its plan.</li>
+</ul>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="_images/organization-audit-logs.png"><img alt="Organization audit logs" src="_images/organization-audit-logs.png" style="width: 80%;" /></a>
+<p class="caption"><span class="caption-text">Organization audit logs</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li>We expanded our documentation to describe <a class="reference external" href="https://docs.readthedocs.io/en/stable/faq.html#how-can-i-deploy-jupyter-book-projects-on-read-the-docs" title="(in Read the Docs user documentation v6.3.2)"><span class="xref std std-ref">how document projects with Jupyter
+Book</span></a>
+and <a class="reference external" href="https://docs.readthedocs.io/en/stable/guides/poetry.html" title="(in Read the Docs user documentation v6.3.2)"><span class="xref std std-doc">how to use Poetry for dependency management</span></a>.</li>
+</ul>
+<p>Thanks to our external contributor <a class="reference external" href="https://github.com/rokroskar">Rok Roškar</a>.</p>
+<p>You can always see the latest changes to our platforms in our <a class="reference external" href="https://docs.readthedocs.io/en/stable/changelog.html" title="(in Read the Docs user documentation v6.3.2)"><span class="xref std std-doc">Read the Docs
+Changelog</span></a>.</p>
+</div>
+<div class="section" id="upcoming-features">
+<h2>Upcoming features<a class="headerlink" href="#upcoming-features" title="Permalink to this headline">¶</a></h2>
+<p>With the Christmas holidays coming up, we will have a few slow weeks ahead.</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/nienn">Ana</a> will keep working on the complete redesign of our community site,
+which is already making good progress.</li>
+<li><a class="reference external" href="https://github.com/agjohnson">Anthony</a> will work with <a class="reference external" href="https://github.com/nienn">Ana</a> on the structure of our new community site
+and document our upcoming new user interface.</li>
+<li><a class="reference external" href="https://github.com/ericholscher">Eric</a> will continue working on our commercial SSL provisioning and CDN with <a class="reference external" href="https://github.com/stsewd">Santos</a>.</li>
+<li><a class="reference external" href="https://github.com/astrojuanlu">Juan Luis</a> will continue promoting our Embed API as well as wrap up
+his work on the Sphinx tutorial.</li>
+<li><a class="reference external" href="https://github.com/humitos">Manuel</a> will adjust the new logging and spam fighting systems,
+and continue making progress on the new metrics infrastructure.</li>
+<li><a class="reference external" href="https://github.com/stsewd">Santos</a> will do the final bits of CDN work on our commercial site,
+finish moving our development documentation to a separate project,
+and continue unifying our commercial and community codebases.</li>
+</ul>
+</div>
+<div class="section" id="possible-issues">
+<h2>Possible issues<a class="headerlink" href="#possible-issues" title="Permalink to this headline">¶</a></h2>
+<p>Last week we accidentally banned a small number of legitimate users
+and they saw their projects temporarily blocked.
+As soon as we noticed this we apologized to the affected users
+and rolled back the ban, and the documentation is now serving normally.</p>
+<hr class="docutils" />
+<p>Considering using Read the Docs for your next Sphinx or MkDocs project?
+Check out <a class="reference external" href="https://docs.readthedocs.io/">our documentation</a> to get started!</p>
+</div>
+</div>
+
+  <div class="section">
+  
+    
+  
+  
+  </div>
+
+      </div>
+
+      <div class="col-minor sidebar">
+  
+  
+  <ul class="post-details">
+    <li>
+      
+        <i class="fa-fw fa fa-calendar"></i>
+        14 December 2021
+      
+    </li>
+
+      
+
+  
+  <li id="author"><span><i class="fa-fw fa fa-user"></i></span>
+    
+      
+      <a href="archive/author/juan-luis-cano-rodriguez.html">Juan Luis Cano Rodríguez</a>
+      
+    </li>
+  
+
+  
+  <li id="location"><span><i class="fa-fw fa fa-location-arrow"></i></span>
+    
+      
+      <a href="archive/location/madrid-spain.html">Madrid, Spain</a>
+      
+    </li>
+  
+
+  
+
+  
+
+  
+  <li id="tags"><span><i class="fa-fw fa fa-tags"></i>
+      </span>
+    
+      
+      <a href="archive/tag/newsletter.html">newsletter</a>
+      
+    
+      
+      <a href="archive/tag/python.html">python</a>
+      
+    </li>
+  
+  
+  </ul>
+
+
+
+<!-- Begin MailerLite Signup Form -->
+  <div id="mlb2-4710274" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-4710274">
+    <div class="ml-form-align-center">
+      <div class="ml-form-embedWrapper embedForm">
+        <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+          <div class="ml-form-embedContent">
+            <h3 style="margin-left: 0">Subscribe to our mailing list</h3>
+            <p>Sign up for our blog and we'll send you news and updates about Sphinx and Read the Docs on a regular basis.</p>
+          </div>
+          <form class="ml-block-form" action="https://static.mailerlite.com/webforms/submit/p8b7z2" data-code="p8b7z2" method="post" target="_blank">
+            <div class="ml-form-formContent">
+              <div class="ml-form-fieldRow ml-last-item">
+                <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                  <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="email address" autocomplete="email" style="width: 90%">
+                </div>
+              </div>
+            </div>
+            <div class="ml-form-embedPermissions">
+              <div class="ml-form-embedPermissionsContent default privacy-policy">
+                <p style="margin-bottom: 0; font-size: 0.8em">You can unsubscribe anytime. For more details, review our <a href="https://docs.readthedocs.io/page/privacy-policy.html" target="_blank">Privacy Policy</a>.</p>
+              </div>
+            </div>
+            <input type="hidden" name="ml-submit" value="1">
+            <div class="ml-form-embedSubmit">
+              <button type="submit" class="primary">Subscribe</button>
+              <button disabled="disabled" style="display:none" type="button" class="loading"> <div class="ml-form-embedSubmitLoad"></div> <span class="sr-only">Loading...</span> </button>
+            </div>
+            <input type="hidden" name="anticsrf" value="true">
+          </form>
+        </div>
+        <div class="ml-form-successBody row-success" style="display:none">
+          <div class="ml-form-successContent">
+            <h4>Thank you!</h4>
+            <p>You have successfully joined our subscriber list.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function ml_webform_success_4710274(){var r=ml_jQuery||jQuery;r(".ml-subscribe-form-4710274 .row-success").show(),r(".ml-subscribe-form-4710274 .row-form").hide()}
+  </script>
+  <img src="https://track.mailerlite.com/webforms/o/4710274/p8b7z2?v1632123501" width="1" height="1" style="max-width:1px;max-height:1px;visibility:hidden;padding:0;margin:0;display:block" alt="." border="0">
+  <script src="https://static.mailerlite.com/js/w/webforms.min.js?v0c75f831c56857441820dcec3163967c" type="text/javascript"></script>
+<!--End mc_embed_signup-->
+
+
+<!-- Jobs 
+<h3> Read the Docs is hiring </h3>
+<ul>
+    <li><a href="https://blog.readthedocs.com/job-frontend/">Front-end Developer</a></li>
+</ul>
+-->
+
+<h3> Follow us </h3>
+
+<ul>
+<li>
+<a href="http://blog.readthedocs.com/archive/atom.xml" rel="me">Atom Feed</a>
+</li>
+<li>
+<a href="https://twitter.com/readthedocs" rel="me">Twitter</a>
+</li>
+</ul>
+
+  <h3><a href="archive.html">Recent Posts</a></h3>
+  <ul>
+    
+    
+      <li><a href="embed-api-v3.html">07 December - Announcing Embed API v3 and sphinx-hoverxref 1.0</a></li>
+    
+      <li><a href="jupyter-book-read-the-docs.html">11 November - Read the Docs ❤️ Jupyter Book</a></li>
+    
+      <li><a href="newsletter-november-2021.html">04 November - Read the Docs newsletter - November 2021</a></li>
+    
+      <li><a href="build-errors-docutils-0-18.html">02 November - Build errors with docutils 0.18</a></li>
+    
+      <li><a href="new-build-specification.html">14 October - Ubuntu 20.04, Python 3.10, and support for Node, Rust, and Go</a></li>
+    
+  </ul>
+
+  <h3><a href="archive/archive.html">Archives</a></h3>
+  <ul>
+  
+    
+    <li><a href="archive/2021.html">2021 (23)</a></li>
+    
+  
+    
+    <li><a href="archive/2020.html">2020 (6)</a></li>
+    
+  
+    
+    <li><a href="archive/2019.html">2019 (15)</a></li>
+    
+  
+    
+    <li><a href="archive/2018.html">2018 (13)</a></li>
+    
+  
+    
+    <li><a href="archive/2017.html">2017 (7)</a></li>
+    
+  
+    
+    <li><a href="archive/2016.html">2016 (5)</a></li>
+    
+  
+    
+    <li><a href="archive/2015.html">2015 (9)</a></li>
+    
+  
+    
+    <li><a href="archive/2014.html">2014 (4)</a></li>
+    
+  
+    
+    <li><a href="archive/2013.html">2013 (2)</a></li>
+    
+  
+  </ul>
+
+        
+      </div>
+    </div>
+  </div>
+  <div id="footer">
+    <div class="row">
+      <div class="col fill">
+        <ul>
+            <li>
+                &copy; Copyright 2021, Read the Docs, Inc.
+            </li>
+
+          <li>
+            Powered by <a href="http://ablog.readthedocs.org">ABlog</a>, and <a href="http://readthedocs.org/">Read the Docs</a>.
+          </li>
+            <li>
+              Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+            </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>

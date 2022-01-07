@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">Read the Docs Blog - Posts tagged jupyter</title>
+  <id>https://chepo92.github.io/read-the-docs-blog/archive/tag/jupyter/atom.xml</id>
+  <updated>2021-11-11T00:00:00Z</updated>
+  <link href="https://chepo92.github.io/read-the-docs-blog/" />
+  <link href="https://chepo92.github.io/read-the-docs-blog/archive/tag/jupyter/atom.xml" rel="self" />
+  <generator uri="http://ablog.readthedocs.org" version="0.9.5">ABlog</generator>
+  <entry xml:base="https://chepo92.github.io/read-the-docs-blog/archive/tag/jupyter/atom.xml">
+    <title type="text">Read the Docs ❤️ Jupyter Book</title>
+    <id>https://chepo92.github.io/read-the-docs-blog/jupyter-book-read-the-docs.html</id>
+    <updated>2021-11-11T00:00:00Z</updated>
+    <published>2021-11-11T00:00:00Z</published>
+    <link href="https://chepo92.github.io/read-the-docs-blog/jupyter-book-read-the-docs.html" />
+    <author>
+      <name>Juan Luis Cano Rodríguez</name>
+    </author>
+    <content type="html">&lt;div class=&quot;section&quot; id=&quot;read-the-docs-jupyter-book&quot;&gt;
+
+&lt;p&gt;We are proud to announce that now Jupyter Book projects are supported on Read the Docs!&lt;/p&gt;
+&lt;p&gt;Both Read the Docs and The Executable Book Project, the folks behind Jupyter Book,
+share a common passion for documentation,
+and we have been collaborating on various topics for some time already.
+For example, we started promoting MyST in favor of our recommonmark
+&lt;a class=&quot;reference internal&quot; href=&quot;../../newsletter-april-2021.html&quot;&gt;&lt;span class=&quot;doc&quot;&gt;back in April this year&lt;/span&gt;&lt;/a&gt;,
+and we wrote a guide on &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/guides/jupyter.html&quot; title=&quot;(in Read the Docs user documentation v6.3.2)&quot;&gt;&lt;span class=&quot;xref std std-doc&quot;&gt;using Jupyter notebook with Sphinx&lt;/span&gt;&lt;/a&gt;
+that benefitted a lot from their feedback.&lt;/p&gt;
+&lt;p&gt;Now we are happy to announce that Jupyter Book itself is supported on Read the Docs,
+after some thorough discussion about the possible implementations
+and thanks in large part to the Jupyter Book developers,
+who addressed all the minor incompatibilities that prevented this from happening.&lt;/p&gt;
+&lt;div class=&quot;section&quot; id=&quot;what-is-jupyter-book&quot;&gt;
+&lt;h2&gt;What is Jupyter Book?&lt;/h2&gt;
+&lt;p&gt;According to &lt;a class=&quot;reference external&quot; href=&quot;https://jupyterbook.org/&quot;&gt;its own documentation&lt;/a&gt;,&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;Jupyter Book is an open source project for building beautiful,
+publication-quality books and documents from computational material.&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;Jupyter Book is the flagship product of &lt;a class=&quot;reference external&quot; href=&quot;https://executablebooks.org/&quot;&gt;the Executable Book Project&lt;/a&gt;,
+an international collaboration between several universities and software projects
+seeking to build open source tools
+that facilitate publishing computational narratives
+using the Jupyter ecosystem.&lt;/p&gt;
+&lt;p&gt;Even though Jupyter Book is much younger than Read the Docs as a project,
+it has become very popular in recent times
+among scientific software developers and educators.
+It enables users to
+write publication-quality content in Markdown thanks to &lt;a class=&quot;reference external&quot; href=&quot;https://myst-parser.readthedocs.io/&quot;&gt;MyST&lt;/a&gt;
+(a Markdown dialect compatible with Sphinx
+&lt;a class=&quot;reference internal&quot; href=&quot;../../newsletter-april-2021.html&quot;&gt;&lt;span class=&quot;doc&quot;&gt;we started promoting back in April this year&lt;/span&gt;&lt;/a&gt;),
+use Jupyter notebooks to author content thanks to &lt;a class=&quot;reference external&quot; href=&quot;https://myst-nb.readthedocs.io/&quot;&gt;MyST-NB&lt;/a&gt;
+(featured in our &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/guides/jupyter.html&quot; title=&quot;(in Read the Docs user documentation v6.3.2)&quot;&gt;&lt;span class=&quot;xref std std-doc&quot;&gt;Jupyter on Sphinx guide&lt;/span&gt;&lt;/a&gt;),
+easily add interactivity thanks to &lt;a class=&quot;reference external&quot; href=&quot;https://thebe.readthedocs.io&quot;&gt;Thebe&lt;/a&gt;,
+and much more.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;why-a-change-was-needed&quot;&gt;
+&lt;h2&gt;Why a change was needed&lt;/h2&gt;
+&lt;p&gt;Read the Docs supports two documentation generation systems
+&lt;a class=&quot;reference external&quot; href=&quot;https://www.sphinx-doc.org/&quot;&gt;Sphinx&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;https://www.mkdocs.org/&quot;&gt;MkDocs&lt;/a&gt;.
+Adding extra systems is difficult with the current codebase,
+because it requires lots of effort to match all the features
+currently supported by the existing ones.&lt;/p&gt;
+&lt;p&gt;On the other hand, even though &lt;a class=&quot;reference external&quot; href=&quot;https://jupyterbook.org/explain/sphinx.html#jupyter-book-is-a-distribution-of-sphinx&quot;&gt;Jupyter Book leverages Sphinx “for almost everything that it
+does”&lt;/a&gt;,
+it purposefully hides some of the Sphinx implementation details from the user
+to create a more user friendly experience.
+One of the consequences of this is that
+the assumptions that Read the Docs makes to build the documentation of Sphinx projects don’t hold:
+in particular, Jupyter Book uses a declarative configuration file &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;_config.yml&lt;/span&gt;&lt;/code&gt;
+that gets translated on the fly to the Sphinx dynamic configuration usually stored in &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;conf.py&lt;/span&gt;&lt;/code&gt;.
+As a result, Jupyter Book projects could not be hosted on Read the Docs - until now!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;how-to-deploy-a-jupyter-book-project-to-read-the-docs&quot;&gt;
+&lt;h2&gt;How to deploy a Jupyter Book project to Read the Docs&lt;/h2&gt;
+&lt;p&gt;With the current development version of Jupyter Book,
+you can now export a Sphinx &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;conf.py&lt;/span&gt;&lt;/code&gt; configuration
+from the Jupyter Book declarative &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;_config.yml&lt;/span&gt;&lt;/code&gt;
+and save it to disk,
+which allows Read the Docs to build the documentation from it
+like any other Sphinx project.&lt;/p&gt;
+&lt;p&gt;The challenge then becomes keeping both configuration files synchronized,
+since every update to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;_config.yml&lt;/span&gt;&lt;/code&gt; or new Jupyter Book release
+can potentially produce changes in the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;conf.py&lt;/span&gt;&lt;/code&gt;.
+As described in &lt;a class=&quot;reference external&quot; href=&quot;https://jupyterbook.org/publish/readthedocs.html&quot; title=&quot;(in Python)&quot;&gt;&lt;span class=&quot;xref std std-doc&quot;&gt;the official documentation&lt;/span&gt;&lt;/a&gt;,
+users can either &lt;a class=&quot;reference external&quot; href=&quot;https://jupyterbook.org/sphinx/index.html#sphinx-convert&quot; title=&quot;(in Python)&quot;&gt;&lt;span class=&quot;xref std std-ref&quot;&gt;manually export the configuration&lt;/span&gt;&lt;/a&gt;
+running a command at will,
+or &lt;a class=&quot;reference external&quot; href=&quot;https://jupyterbook.org/sphinx/index.html#sphinx-convert-pre-commit&quot; title=&quot;(in Python)&quot;&gt;&lt;span class=&quot;xref std std-ref&quot;&gt;set up an automation to do it on every change&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To see this in action, have a look at
+&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/astrojuanlu/jupyterbook-on-read-the-docs&quot;&gt;this example project&lt;/a&gt;
+that contains the bare minimum to make &lt;a class=&quot;reference external&quot; href=&quot;https://jupyterbook.org/start/create.html&quot; title=&quot;(in Python)&quot;&gt;&lt;span class=&quot;xref std std-doc&quot;&gt;the demo book&lt;/span&gt;&lt;/a&gt;
+work on Read the Docs.&lt;/p&gt;
+&lt;p&gt;We are excited that this is now possible
+and look forward to seeing more projects built with Jupyter Book!&lt;/p&gt;
+&lt;p&gt;—&lt;/p&gt;
+&lt;p&gt;Considering using Read the Docs for your next Sphinx or MkDocs project?
+Check out &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/&quot;&gt;our documentation&lt;/a&gt; to get started!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+</feed>

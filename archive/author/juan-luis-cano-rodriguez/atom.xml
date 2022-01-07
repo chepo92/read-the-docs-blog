@@ -1,0 +1,948 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">Read the Docs Blog - Posts by Juan Luis Cano Rodríguez</title>
+  <id>https://chepo92.github.io/read-the-docs-blog/archive/author/juan-luis-cano-rodriguez/atom.xml</id>
+  <updated>2021-12-14T00:00:00Z</updated>
+  <link href="https://chepo92.github.io/read-the-docs-blog/" />
+  <link href="https://chepo92.github.io/read-the-docs-blog/archive/author/juan-luis-cano-rodriguez/atom.xml" rel="self" />
+  <generator uri="http://ablog.readthedocs.org" version="0.9.5">ABlog</generator>
+  <entry xml:base="https://chepo92.github.io/read-the-docs-blog/archive/author/juan-luis-cano-rodriguez/atom.xml">
+    <title type="text">Read the Docs newsletter - December 2021</title>
+    <id>https://chepo92.github.io/read-the-docs-blog/newsletter-december-2021.html</id>
+    <updated>2021-12-14T00:00:00Z</updated>
+    <published>2021-12-14T00:00:00Z</published>
+    <link href="https://chepo92.github.io/read-the-docs-blog/newsletter-december-2021.html" />
+    <author>
+      <name>Juan Luis Cano Rodríguez</name>
+    </author>
+    <content type="html">&lt;div class=&quot;section&quot; id=&quot;read-the-docs-newsletter-december-2021&quot;&gt;
+
+&lt;p&gt;Welcome to the latest edition of our monthly newsletter, where we
+share the most relevant updates around Read the Docs,
+offer a summary of new features we shipped
+during the previous month,
+and share what we’ll be focusing on in the near future.&lt;/p&gt;
+&lt;div class=&quot;section&quot; id=&quot;company-highlights&quot;&gt;
+&lt;h2&gt;Company highlights&lt;/h2&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;We successfully deployed mitigation measures against spam,
+and we are happy to report that the amount of abusive projects
+has dramatically decreased.&lt;/li&gt;
+&lt;li&gt;We started tracking usage of different parts of our application
+in a more systematic fashion which will enable us to make
+better product design decisions going forward.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;new-features&quot;&gt;
+&lt;h2&gt;New features&lt;/h2&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;We revamped our support for &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/build-notifications.html&quot; title=&quot;(in Read the Docs user documentation v6.3.2)&quot;&gt;&lt;span class=&quot;xref std std-doc&quot;&gt;webhooks&lt;/span&gt;&lt;/a&gt;:
+now they have a dedicated section in the project settings,
+you can customize the payload,
+and you can inspect the status of each webhook delivery.
+Interested in receiving build notifications on &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/build-notifications.html#slack&quot; title=&quot;(in Read the Docs user documentation v6.3.2)&quot;&gt;&lt;span class=&quot;xref std std-ref&quot;&gt;Slack&lt;/span&gt;&lt;/a&gt;
+or &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/build-notifications.html#discord&quot; title=&quot;(in Read the Docs user documentation v6.3.2)&quot;&gt;&lt;span class=&quot;xref std std-ref&quot;&gt;Discord&lt;/span&gt;&lt;/a&gt;? Now you can!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;figure align-center&quot; id=&quot;id1&quot;&gt;
+&lt;img alt=&quot;Revamped webhooks&quot; src=&quot;../../_images/webhooks-events.png&quot; style=&quot;width: 80%;&quot; /&gt;
+&lt;p class=&quot;caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;Revamped webhooks&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;On Read the Docs for Business, we improved our security audit logs to show information from all the organization
+according to its plan.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;figure align-center&quot; id=&quot;id2&quot;&gt;
+&lt;img alt=&quot;Organization audit logs&quot; src=&quot;../../_images/organization-audit-logs.png&quot; style=&quot;width: 80%;&quot; /&gt;
+&lt;p class=&quot;caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;Organization audit logs&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;We expanded our documentation to describe &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/faq.html#how-can-i-deploy-jupyter-book-projects-on-read-the-docs&quot; title=&quot;(in Read the Docs user documentation v6.3.2)&quot;&gt;&lt;span class=&quot;xref std std-ref&quot;&gt;how document projects with Jupyter
+Book&lt;/span&gt;&lt;/a&gt;
+and &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/guides/poetry.html&quot; title=&quot;(in Read the Docs user documentation v6.3.2)&quot;&gt;&lt;span class=&quot;xref std std-doc&quot;&gt;how to use Poetry for dependency management&lt;/span&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Thanks to our external contributor &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/rokroskar&quot;&gt;Rok Roškar&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can always see the latest changes to our platforms in our &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/changelog.html&quot; title=&quot;(in Read the Docs user documentation v6.3.2)&quot;&gt;&lt;span class=&quot;xref std std-doc&quot;&gt;Read the Docs
+Changelog&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;upcoming-features&quot;&gt;
+&lt;h2&gt;Upcoming features&lt;/h2&gt;
+&lt;p&gt;With the Christmas holidays coming up, we will have a few slow weeks ahead.&lt;/p&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/nienn&quot;&gt;Ana&lt;/a&gt; will keep working on the complete redesign of our community site,
+which is already making good progress.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/agjohnson&quot;&gt;Anthony&lt;/a&gt; will work with &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/nienn&quot;&gt;Ana&lt;/a&gt; on the structure of our new community site
+and document our upcoming new user interface.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/ericholscher&quot;&gt;Eric&lt;/a&gt; will continue working on our commercial SSL provisioning and CDN with &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/stsewd&quot;&gt;Santos&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/astrojuanlu&quot;&gt;Juan Luis&lt;/a&gt; will continue promoting our Embed API as well as wrap up
+his work on the Sphinx tutorial.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/humitos&quot;&gt;Manuel&lt;/a&gt; will adjust the new logging and spam fighting systems,
+and continue making progress on the new metrics infrastructure.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/stsewd&quot;&gt;Santos&lt;/a&gt; will do the final bits of CDN work on our commercial site,
+finish moving our development documentation to a separate project,
+and continue unifying our commercial and community codebases.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;possible-issues&quot;&gt;
+&lt;h2&gt;Possible issues&lt;/h2&gt;
+&lt;p&gt;Last week we accidentally banned a small number of legitimate users
+and they saw their projects temporarily blocked.
+As soon as we noticed this we apologized to the affected users
+and rolled back the ban, and the documentation is now serving normally.&lt;/p&gt;
+&lt;hr class=&quot;docutils&quot; /&gt;
+&lt;p&gt;Considering using Read the Docs for your next Sphinx or MkDocs project?
+Check out &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/&quot;&gt;our documentation&lt;/a&gt; to get started!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry xml:base="https://chepo92.github.io/read-the-docs-blog/archive/author/juan-luis-cano-rodriguez/atom.xml">
+    <title type="text">Announcing Embed API v3 and sphinx-hoverxref 1.0</title>
+    <id>https://chepo92.github.io/read-the-docs-blog/embed-api-v3.html</id>
+    <updated>2021-12-07T00:00:00Z</updated>
+    <published>2021-12-07T00:00:00Z</published>
+    <link href="https://chepo92.github.io/read-the-docs-blog/embed-api-v3.html" />
+    <author>
+      <name>Juan Luis Cano Rodríguez</name>
+    </author>
+    <content type="html">&lt;div class=&quot;section&quot; id=&quot;announcing-embed-api-v3-and-sphinx-hoverxref-1-0&quot;&gt;
+
+&lt;p&gt;We are thrilled to announce the availability of Read the Docs Embed API v3,
+along with its official client, sphinx-hoverxref 1.0.
+This work has been possible in part thanks to the
+&lt;a class=&quot;reference internal&quot; href=&quot;../../czi-grant-announcement.html&quot;&gt;&lt;span class=&quot;doc&quot;&gt;the CZI grant we received&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&quot;section&quot; id=&quot;the-value-of-content-embedding&quot;&gt;
+&lt;h2&gt;The value of content embedding&lt;/h2&gt;
+&lt;p&gt;As we wrote in
+&lt;a class=&quot;reference internal&quot; href=&quot;../../hoverxref-intersphinx.html&quot;&gt;&lt;span class=&quot;doc&quot;&gt;our first blog post about sphinx-hoverxref&lt;/span&gt;&lt;/a&gt;,
+one of the most powerful features of Sphinx
+is the possibility of creating cross references
+to other documentation projects.
+However, a reader finding several links in a technical documentation
+might need to open several browser tabs to fully understand the context,
+resulting in a lot of friction in the form of context switching.&lt;/p&gt;
+&lt;p&gt;One way of mitigating the problem is to show a small preview
+in the form of tooltip or modal with the contents of the link.
+This is where the Embed API and sphinx-hoverxref come in.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://sphinx-hoverxref.readthedocs.io/&quot;&gt;sphinx-hoverxref&lt;/a&gt; is a Sphinx extension that addresses this problem
+by adding tooltips on the cross references of the HTML documentation
+with the content of the linked section.
+To do so, it inserts a small JavaScript file that
+calls the Read the Docs Embed API when the user hovers any link.
+&lt;a class=&quot;reference internal&quot; href=&quot;../../hoverxref-intersphinx.html&quot;&gt;&lt;span class=&quot;doc&quot;&gt;Back in June&lt;/span&gt;&lt;/a&gt; we announced
+intersphinx support in &lt;a class=&quot;reference external&quot; href=&quot;https://sphinx-hoverxref.readthedocs.io/&quot;&gt;sphinx-hoverxref&lt;/a&gt; 0.6b1,
+which allowed users to include modals and tooltips
+also for cross references to other projects.&lt;/p&gt;
+&lt;div class=&quot;figure align-center&quot; id=&quot;id2&quot;&gt;
+&lt;a class=&quot;reference external image-reference&quot; href=&quot;/_images/sphinx-hoverxref-showcase.gif&quot;&gt;&lt;img alt=&quot;sphinx-hoverxref displaying tooltips for cross references&quot; src=&quot;../../_images/sphinx-hoverxref-showcase.gif&quot; style=&quot;width: 60%;&quot; /&gt;&lt;/a&gt;
+&lt;p class=&quot;caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;sphinx-hoverxref displaying a tooltip including an equation&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Some big projects already using it include &lt;a class=&quot;reference external&quot; href=&quot;https://docs.tweepy.org/&quot;&gt;Tweepy&lt;/a&gt;,
+a Python client for Twitter, and &lt;a class=&quot;reference external&quot; href=&quot;https://docs.scrapy.org/&quot;&gt;Scrapy&lt;/a&gt;,
+a framework for crawling websites.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;embed-api-v3-and-sphinx-hoverxref-1-0&quot;&gt;
+&lt;h2&gt;Embed API v3 and sphinx-hoverxref 1.0&lt;/h2&gt;
+&lt;p&gt;After some months of work, &lt;strong&gt;we are excited to publish v3 of our Embed API,
+and with it, version 1.0 of sphinx-hoverxref&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Among other things,
+the new versions allow you to
+&lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/guides/embedding-content.html#embedding-content-from-your-documentation&quot; title=&quot;(in Read the Docs user documentation v6.3.2)&quot;&gt;&lt;span class=&quot;xref std std-ref&quot;&gt;embed content from pages hosted outside Read the Docs&lt;/span&gt;&lt;/a&gt;.
+For security reasons, we have an allowlist of such external domains
+that currently includes Python, NumPy, SciPy, SymPy,
+and we would like to
+&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/readthedocs/readthedocs.org/issues&quot;&gt;invite the community to suggest more domains to add&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Other additions and fixes include:&lt;/p&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;Support for JS and CSS assets in Sphinx 4.1+.&lt;/li&gt;
+&lt;li&gt;Support for &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;glossary&lt;/span&gt;&lt;/code&gt; / &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;term&lt;/span&gt;&lt;/code&gt; and sphinxcontrib-bibtex.&lt;/li&gt;
+&lt;li&gt;Avoid showing the browser built-in tooltip for links that have the extension enabled.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Finally, version 3 of the Embed API
+paves the way for supporting non-Sphinx projects in the future.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;embedding-content-with-sphinx-hoverxref&quot;&gt;
+&lt;h2&gt;Embedding content with sphinx-hoverxref&lt;/h2&gt;
+&lt;p&gt;To use sphinx-hoverxref in your Read the Docs project,
+&lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/guides/reproducible-builds.html&quot; title=&quot;(in Read the Docs user documentation v6.3.2)&quot;&gt;&lt;span class=&quot;xref std std-doc&quot;&gt;declare it as part of your dependencies&lt;/span&gt;&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&quot;literal-block-wrapper docutils container&quot; id=&quot;id3&quot;&gt;
+&lt;div class=&quot;code-block-caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;requirements.txt&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sphinx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;4.3.1&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;sphinx_rtd_theme&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.0.0&lt;/span&gt;
+&lt;span class=&quot;hll&quot;&gt;&lt;span class=&quot;n&quot;&gt;sphinx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hoverxref&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.0.0&lt;/span&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;And add it to your list of Sphinx extensions:&lt;/p&gt;
+&lt;div class=&quot;literal-block-wrapper docutils container&quot; id=&quot;id4&quot;&gt;
+&lt;div class=&quot;code-block-caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;conf.py&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;extensions&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# ...other extensions&lt;/span&gt;
+&lt;span class=&quot;hll&quot;&gt;    &lt;span class=&quot;s2&quot;&gt;&amp;quot;hoverxref.extension&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;To enable the extension on all &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;:ref:&lt;/span&gt;&lt;/code&gt; of your documentation,
+set the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;hoverxref_auto_ref&lt;/span&gt;&lt;/code&gt; to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;True&lt;/span&gt;&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;literal-block-wrapper docutils container&quot; id=&quot;id5&quot;&gt;
+&lt;div class=&quot;code-block-caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;conf.py&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hoverxref_auto_ref&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;True&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;And you will start seeing tooltips on your internal references.
+Apart from &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;:ref:&lt;/span&gt;&lt;/code&gt; roles, you can also enable tooltips on:&lt;/p&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://sphinx-hoverxref.readthedocs.io/en/stable/usage.html#tooltip-on-sphinx-domains&quot; title=&quot;(in sphinx-hoverxref)&quot;&gt;&lt;span class=&quot;xref std std-ref&quot;&gt;Code objects from any Sphinx domain&lt;/span&gt;&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://sphinx-hoverxref.readthedocs.io/en/stable/usage.html#tooltip-on-glossary-terms&quot; title=&quot;(in sphinx-hoverxref)&quot;&gt;&lt;span class=&quot;xref std std-ref&quot;&gt;Glossary terms&lt;/span&gt;&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://sphinx-hoverxref.readthedocs.io/en/stable/usage.html#tooltip-on-sphinxcontrib-bibtex-cites&quot; title=&quot;(in sphinx-hoverxref)&quot;&gt;&lt;span class=&quot;xref std std-ref&quot;&gt;BibTeX citations&lt;/span&gt;&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://sphinx-hoverxref.readthedocs.io/en/stable/usage.html#tooltip-with-content-that-needs-extra-rendering-steps&quot; title=&quot;(in sphinx-hoverxref)&quot;&gt;&lt;span class=&quot;xref std std-ref&quot;&gt;Pages containing extra JavaScript like sphinx-tabs and
+MathJax&lt;/span&gt;&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://sphinx-hoverxref.readthedocs.io/en/stable/usage.html#tooltip-on-intersphinx-content&quot; title=&quot;(in sphinx-hoverxref)&quot;&gt;&lt;span class=&quot;xref std std-ref&quot;&gt;Intersphinx references&lt;/span&gt;&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://sphinx-hoverxref.readthedocs.io/en/stable/usage.html#tooltip-on-custom-object&quot; title=&quot;(in sphinx-hoverxref)&quot;&gt;&lt;span class=&quot;xref std std-ref&quot;&gt;And custom objects!&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;admonition note&quot;&gt;
+&lt;p class=&quot;first admonition-title&quot;&gt;Note&lt;/p&gt;
+&lt;p class=&quot;last&quot;&gt;sphinx-hoverxref includes the JavaScript embed client in the HTML assets,
+but it is not yet available as a standalone library that can be reused
+with standard frontend packaging tools.
+If you would like to see this happening,
+&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/readthedocs/sphinx-hoverxref/issues/&quot;&gt;let us know&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;calling-the-embed-api-directly&quot;&gt;
+&lt;h2&gt;Calling the Embed API directly&lt;/h2&gt;
+&lt;p&gt;As explained in &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/guides/embedding-content.html#calling-the-embed-api-directly&quot; title=&quot;(in Read the Docs user documentation v6.3.2)&quot;&gt;&lt;span class=&quot;xref std std-ref&quot;&gt;our embedding
+guide&lt;/span&gt;&lt;/a&gt;,
+you can call the API directly from any HTTP client:&lt;/p&gt;
+&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;curl -s &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://readthedocs.org/api/v3/embed/\&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;?url=https://docs.readthedocs.io/en/latest/features.html\&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;%23read-the-docs-features&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; python -m json.tool
+&lt;span class=&quot;go&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;  &amp;quot;url&amp;quot;: &amp;quot;https://docs.readthedocs.io/en/latest/features.html#read-the-docs-features&amp;quot;,&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;  &amp;quot;fragment&amp;quot;: &amp;quot;read-the-docs-features&amp;quot;,&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;  &amp;quot;content&amp;quot;: &amp;quot;&amp;lt;div class=\&amp;quot;section\&amp;quot; id=\&amp;quot;read-the-docs-features\&amp;quot;&amp;gt;\n&amp;lt;h1&amp;gt;Read the Docs ...&amp;quot;,&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;  &amp;quot;external&amp;quot;: false&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Or visually explore the query in the &lt;a class=&quot;reference external&quot; href=&quot;https://readthedocs.org/api/v3/embed/?url=https://docs.readthedocs.io/en/latest/features.html%23read-the-docs-features&quot;&gt;web interface&lt;/a&gt; instead.&lt;/p&gt;
+&lt;p&gt;The &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/api/v3.html#embed&quot; title=&quot;(in Read the Docs user documentation v6.3.2)&quot;&gt;&lt;span class=&quot;xref std std-ref&quot;&gt;reference documentation&lt;/span&gt;&lt;/a&gt;
+includes more detail about the parameters and return values of the API.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;try-it-out&quot;&gt;
+&lt;h2&gt;Try it out!&lt;/h2&gt;
+&lt;p&gt;We would like to invite the community to try out these features and
+send us feedback. With the help of our users, we will keep moving towards
+a more cohesive documentation ecosystem of interlinked Python projects.&lt;/p&gt;
+&lt;hr class=&quot;docutils&quot; /&gt;
+&lt;p&gt;Considering using Read the Docs for your next Sphinx or MkDocs project?
+Check out &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/&quot;&gt;our documentation&lt;/a&gt; to get started!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry xml:base="https://chepo92.github.io/read-the-docs-blog/archive/author/juan-luis-cano-rodriguez/atom.xml">
+    <title type="text">Read the Docs ❤️ Jupyter Book</title>
+    <id>https://chepo92.github.io/read-the-docs-blog/jupyter-book-read-the-docs.html</id>
+    <updated>2021-11-11T00:00:00Z</updated>
+    <published>2021-11-11T00:00:00Z</published>
+    <link href="https://chepo92.github.io/read-the-docs-blog/jupyter-book-read-the-docs.html" />
+    <author>
+      <name>Juan Luis Cano Rodríguez</name>
+    </author>
+    <content type="html">&lt;div class=&quot;section&quot; id=&quot;read-the-docs-jupyter-book&quot;&gt;
+
+&lt;p&gt;We are proud to announce that now Jupyter Book projects are supported on Read the Docs!&lt;/p&gt;
+&lt;p&gt;Both Read the Docs and The Executable Book Project, the folks behind Jupyter Book,
+share a common passion for documentation,
+and we have been collaborating on various topics for some time already.
+For example, we started promoting MyST in favor of our recommonmark
+&lt;a class=&quot;reference internal&quot; href=&quot;../../newsletter-april-2021.html&quot;&gt;&lt;span class=&quot;doc&quot;&gt;back in April this year&lt;/span&gt;&lt;/a&gt;,
+and we wrote a guide on &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/guides/jupyter.html&quot; title=&quot;(in Read the Docs user documentation v6.3.2)&quot;&gt;&lt;span class=&quot;xref std std-doc&quot;&gt;using Jupyter notebook with Sphinx&lt;/span&gt;&lt;/a&gt;
+that benefitted a lot from their feedback.&lt;/p&gt;
+&lt;p&gt;Now we are happy to announce that Jupyter Book itself is supported on Read the Docs,
+after some thorough discussion about the possible implementations
+and thanks in large part to the Jupyter Book developers,
+who addressed all the minor incompatibilities that prevented this from happening.&lt;/p&gt;
+&lt;div class=&quot;section&quot; id=&quot;what-is-jupyter-book&quot;&gt;
+&lt;h2&gt;What is Jupyter Book?&lt;/h2&gt;
+&lt;p&gt;According to &lt;a class=&quot;reference external&quot; href=&quot;https://jupyterbook.org/&quot;&gt;its own documentation&lt;/a&gt;,&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;Jupyter Book is an open source project for building beautiful,
+publication-quality books and documents from computational material.&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;Jupyter Book is the flagship product of &lt;a class=&quot;reference external&quot; href=&quot;https://executablebooks.org/&quot;&gt;the Executable Book Project&lt;/a&gt;,
+an international collaboration between several universities and software projects
+seeking to build open source tools
+that facilitate publishing computational narratives
+using the Jupyter ecosystem.&lt;/p&gt;
+&lt;p&gt;Even though Jupyter Book is much younger than Read the Docs as a project,
+it has become very popular in recent times
+among scientific software developers and educators.
+It enables users to
+write publication-quality content in Markdown thanks to &lt;a class=&quot;reference external&quot; href=&quot;https://myst-parser.readthedocs.io/&quot;&gt;MyST&lt;/a&gt;
+(a Markdown dialect compatible with Sphinx
+&lt;a class=&quot;reference internal&quot; href=&quot;../../newsletter-april-2021.html&quot;&gt;&lt;span class=&quot;doc&quot;&gt;we started promoting back in April this year&lt;/span&gt;&lt;/a&gt;),
+use Jupyter notebooks to author content thanks to &lt;a class=&quot;reference external&quot; href=&quot;https://myst-nb.readthedocs.io/&quot;&gt;MyST-NB&lt;/a&gt;
+(featured in our &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/guides/jupyter.html&quot; title=&quot;(in Read the Docs user documentation v6.3.2)&quot;&gt;&lt;span class=&quot;xref std std-doc&quot;&gt;Jupyter on Sphinx guide&lt;/span&gt;&lt;/a&gt;),
+easily add interactivity thanks to &lt;a class=&quot;reference external&quot; href=&quot;https://thebe.readthedocs.io&quot;&gt;Thebe&lt;/a&gt;,
+and much more.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;why-a-change-was-needed&quot;&gt;
+&lt;h2&gt;Why a change was needed&lt;/h2&gt;
+&lt;p&gt;Read the Docs supports two documentation generation systems
+&lt;a class=&quot;reference external&quot; href=&quot;https://www.sphinx-doc.org/&quot;&gt;Sphinx&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;https://www.mkdocs.org/&quot;&gt;MkDocs&lt;/a&gt;.
+Adding extra systems is difficult with the current codebase,
+because it requires lots of effort to match all the features
+currently supported by the existing ones.&lt;/p&gt;
+&lt;p&gt;On the other hand, even though &lt;a class=&quot;reference external&quot; href=&quot;https://jupyterbook.org/explain/sphinx.html#jupyter-book-is-a-distribution-of-sphinx&quot;&gt;Jupyter Book leverages Sphinx “for almost everything that it
+does”&lt;/a&gt;,
+it purposefully hides some of the Sphinx implementation details from the user
+to create a more user friendly experience.
+One of the consequences of this is that
+the assumptions that Read the Docs makes to build the documentation of Sphinx projects don’t hold:
+in particular, Jupyter Book uses a declarative configuration file &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;_config.yml&lt;/span&gt;&lt;/code&gt;
+that gets translated on the fly to the Sphinx dynamic configuration usually stored in &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;conf.py&lt;/span&gt;&lt;/code&gt;.
+As a result, Jupyter Book projects could not be hosted on Read the Docs - until now!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;how-to-deploy-a-jupyter-book-project-to-read-the-docs&quot;&gt;
+&lt;h2&gt;How to deploy a Jupyter Book project to Read the Docs&lt;/h2&gt;
+&lt;p&gt;With the current development version of Jupyter Book,
+you can now export a Sphinx &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;conf.py&lt;/span&gt;&lt;/code&gt; configuration
+from the Jupyter Book declarative &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;_config.yml&lt;/span&gt;&lt;/code&gt;
+and save it to disk,
+which allows Read the Docs to build the documentation from it
+like any other Sphinx project.&lt;/p&gt;
+&lt;p&gt;The challenge then becomes keeping both configuration files synchronized,
+since every update to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;_config.yml&lt;/span&gt;&lt;/code&gt; or new Jupyter Book release
+can potentially produce changes in the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;conf.py&lt;/span&gt;&lt;/code&gt;.
+As described in &lt;a class=&quot;reference external&quot; href=&quot;https://jupyterbook.org/publish/readthedocs.html&quot; title=&quot;(in Python)&quot;&gt;&lt;span class=&quot;xref std std-doc&quot;&gt;the official documentation&lt;/span&gt;&lt;/a&gt;,
+users can either &lt;a class=&quot;reference external&quot; href=&quot;https://jupyterbook.org/sphinx/index.html#sphinx-convert&quot; title=&quot;(in Python)&quot;&gt;&lt;span class=&quot;xref std std-ref&quot;&gt;manually export the configuration&lt;/span&gt;&lt;/a&gt;
+running a command at will,
+or &lt;a class=&quot;reference external&quot; href=&quot;https://jupyterbook.org/sphinx/index.html#sphinx-convert-pre-commit&quot; title=&quot;(in Python)&quot;&gt;&lt;span class=&quot;xref std std-ref&quot;&gt;set up an automation to do it on every change&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To see this in action, have a look at
+&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/astrojuanlu/jupyterbook-on-read-the-docs&quot;&gt;this example project&lt;/a&gt;
+that contains the bare minimum to make &lt;a class=&quot;reference external&quot; href=&quot;https://jupyterbook.org/start/create.html&quot; title=&quot;(in Python)&quot;&gt;&lt;span class=&quot;xref std std-doc&quot;&gt;the demo book&lt;/span&gt;&lt;/a&gt;
+work on Read the Docs.&lt;/p&gt;
+&lt;p&gt;We are excited that this is now possible
+and look forward to seeing more projects built with Jupyter Book!&lt;/p&gt;
+&lt;p&gt;—&lt;/p&gt;
+&lt;p&gt;Considering using Read the Docs for your next Sphinx or MkDocs project?
+Check out &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/&quot;&gt;our documentation&lt;/a&gt; to get started!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry xml:base="https://chepo92.github.io/read-the-docs-blog/archive/author/juan-luis-cano-rodriguez/atom.xml">
+    <title type="text">Read the Docs newsletter - November 2021</title>
+    <id>https://chepo92.github.io/read-the-docs-blog/newsletter-november-2021.html</id>
+    <updated>2021-11-04T00:00:00Z</updated>
+    <published>2021-11-04T00:00:00Z</published>
+    <link href="https://chepo92.github.io/read-the-docs-blog/newsletter-november-2021.html" />
+    <author>
+      <name>Juan Luis Cano Rodríguez</name>
+    </author>
+    <content type="html">&lt;div class=&quot;section&quot; id=&quot;read-the-docs-newsletter-november-2021&quot;&gt;
+
+&lt;p&gt;Welcome to the latest edition of our monthly newsletter, where we
+share the most relevant updates around Read the Docs,
+offer a summary of new features we shipped
+during the previous month,
+and share what we’ll be focusing on in the near future.&lt;/p&gt;
+&lt;div class=&quot;section&quot; id=&quot;company-highlights&quot;&gt;
+&lt;h2&gt;Company highlights&lt;/h2&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;During the first week of November we attended the
+2021 Essential Open Source Software for Science Annual Meeting,
+an event organized by the CZI Science team.
+We are thrilled to connect with projects in the Open Science ecosystem.&lt;/li&gt;
+&lt;li&gt;We upgraded our systems to Python 3.8 and Ubuntu 20.04 LTS.
+This will allow us to leverage newer Python features
+and use more up to date dependencies.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/tutorial/index.html&quot; title=&quot;(in Read the Docs user documentation v6.3.2)&quot;&gt;&lt;span class=&quot;xref std std-doc&quot;&gt;The Read the Docs tutorial&lt;/span&gt;&lt;/a&gt; we started writing
+as part of &lt;a class=&quot;reference internal&quot; href=&quot;../../czi-grant-announcement.html&quot;&gt;&lt;span class=&quot;doc&quot;&gt;the CZI grant we received&lt;/span&gt;&lt;/a&gt;
+is now complete! We plan to keep updating it with user feedback
+and keep improving other parts of our documentation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;new-features&quot;&gt;
+&lt;h2&gt;New features&lt;/h2&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;We added &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/readthedocs/readthedocs.org/pull/8546&quot;&gt;a checkbox to subscribe to our newsletter on new
+signups&lt;/a&gt;.
+If you haven’t already, you can also subscribe
+using the form on the top right of our blog.&lt;/li&gt;
+&lt;li&gt;We &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/readthedocs/readthedocs.org/pull/8590&quot;&gt;no longer show the rebuild option on closed or merged pull request
+builds&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;We now &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/readthedocs/readthedocs.org/pull/8601&quot;&gt;re-sync VCS accounts for SSO organization
+daily&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Thanks to our external contributors &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/adamtheturtle&quot;&gt;Adam Dangoor&lt;/a&gt;, &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/Arthur-Milchior&quot;&gt;Arthur Milchior&lt;/a&gt;,
+&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/carltongibson&quot;&gt;Carlton Gibson&lt;/a&gt;, &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/deepto98&quot;&gt;Deepto&lt;/a&gt;, &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/jugmac00&quot;&gt;Jürgen Gmach&lt;/a&gt;, and &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/saadmk11&quot;&gt;Maksudul Haque&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can always see the latest changes to our platforms in our &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/changelog.html&quot; title=&quot;(in Read the Docs user documentation v6.3.2)&quot;&gt;&lt;span class=&quot;xref std std-doc&quot;&gt;Read the Docs
+Changelog&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;upcoming-features&quot;&gt;
+&lt;h2&gt;Upcoming features&lt;/h2&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/nienn&quot;&gt;Ana&lt;/a&gt; will be working on bringing the mockups of our new landing pages to reality.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/agjohnson&quot;&gt;Anthony&lt;/a&gt; will keep working on finances and taxes,
+and helping &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/nienn&quot;&gt;Ana&lt;/a&gt; with the frontend work.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/ericholscher&quot;&gt;Eric&lt;/a&gt; will send out a report for our grant work,
+and work with &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/stsewd&quot;&gt;Santos&lt;/a&gt; on implementing CloudFlare for our corporate site.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/astrojuanlu&quot;&gt;Juan Luis&lt;/a&gt; will work on moving our development documentation to a separate project,
+finish the Sphinx tutorial, spread the word about MyST Markdown,
+and promote our Embed API.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/humitos&quot;&gt;Manuel&lt;/a&gt; will add mechanisms to fight spam in our platform
+and improve our internal metrics.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/stsewd&quot;&gt;Santos&lt;/a&gt; will wrap up the custom outgoing webhooks
+and keep unifying the code of our community and commercial sites.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;possible-issues&quot;&gt;
+&lt;h2&gt;Possible issues&lt;/h2&gt;
+&lt;p&gt;The docutils 0.18 release from late October is incompatible with older versions of Sphinx,
+which are still used by a significant number of projects on Read the Docs.
+A large number of them were not pinning their dependencies and have experienced broken builds,
+which has resulted in a large number of issues and support requests.
+We have written a blog post &lt;a class=&quot;reference internal&quot; href=&quot;../../build-errors-docutils-0-18.html&quot;&gt;&lt;span class=&quot;doc&quot;&gt;explaining the situation and the ways to solve
+it&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;hr class=&quot;docutils&quot; /&gt;
+&lt;p&gt;Considering using Read the Docs for your next Sphinx or MkDocs project?
+Check out &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/&quot;&gt;our documentation&lt;/a&gt; to get started!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry xml:base="https://chepo92.github.io/read-the-docs-blog/archive/author/juan-luis-cano-rodriguez/atom.xml">
+    <title type="text">Ubuntu 20.04, Python 3.10, and support for Node, Rust, and Go</title>
+    <id>https://chepo92.github.io/read-the-docs-blog/new-build-specification.html</id>
+    <updated>2021-10-14T00:00:00Z</updated>
+    <published>2021-10-14T00:00:00Z</published>
+    <link href="https://chepo92.github.io/read-the-docs-blog/new-build-specification.html" />
+    <author>
+      <name>Juan Luis Cano Rodríguez</name>
+    </author>
+    <content type="html">&lt;div class=&quot;section&quot; id=&quot;ubuntu-20-04-python-3-10-and-support-for-node-rust-and-go&quot;&gt;
+
+&lt;p&gt;We are excited to announce that now Read the Docs users
+can use a newer build specification in their projects
+that will change the base image to one based on Ubuntu 20.04,
+ship the recently released Python 3.10,
+and allow users to easily specify the version of Node.js, Rust, and Go.
+This feature has been a long time in the making,
+and we think it will simplify the configuration of many projects.&lt;/p&gt;
+&lt;div class=&quot;section&quot; id=&quot;previous-situation&quot;&gt;
+&lt;h2&gt;Previous situation&lt;/h2&gt;
+&lt;p&gt;The Docker images used by our builders were based on Ubuntu 18.04.
+Recently, we added a new feature to &lt;a class=&quot;reference internal&quot; href=&quot;../../apt-packages.html&quot;&gt;&lt;span class=&quot;doc&quot;&gt;install custom system packages&lt;/span&gt;&lt;/a&gt;,
+which allowed many projects to have better control of their build process
+without having to use conda to manage non-Python dependencies.&lt;/p&gt;
+&lt;p&gt;However, this Ubuntu version was released three years ago and,
+even though it was good enough for most projects,
+we have been receiving requests to upgrade certain system packages over the years.
+Since these are managed through the operating system package manager,
+and we do not provide a way to add custom Personal Package Archives,
+such upgrades were not possible.&lt;/p&gt;
+&lt;p&gt;Many Python projects use a secondary programming language
+for a variety of reasons. Established compiled languages like C, C++, and FORTRAN
+have readily available compilers that will work for the majority of use cases.
+However, other younger technologies move at a faster pace,
+and developers often want specific versions of the toolchains
+that cannot be installed with the system package manager.
+This affected projects that combine backend and frontend code
+that need Node.js to compile their JavaScript sources, such as Jupyter extensions,
+and libraries with performance-critical code written in Rust or Go.&lt;/p&gt;
+&lt;p&gt;We have often suggested specifying custom versions of non-Python dependencies
+&lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/guides/conda.html&quot;&gt;using conda&lt;/a&gt;,
+to specify custom versions of non-Python dependencies,
+but this requires learning another tool that might be unfamiliar for some projects.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;new-build-yaml-configuration&quot;&gt;
+&lt;h2&gt;New &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;build&lt;/span&gt;&lt;/code&gt; YAML configuration&lt;/h2&gt;
+&lt;p&gt;To overcome all these problems, we have added a new configuration value,
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;build.tools&lt;/span&gt;&lt;/code&gt;, that receive a dictionary of toolchain versions.
+This new configuration requires specifying the base image name
+in &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;build.os&lt;/span&gt;&lt;/code&gt;, currently &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ubuntu-20.04&lt;/span&gt;&lt;/code&gt;.
+&lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/config-file/v2.html&quot; title=&quot;(in Read the Docs user documentation v6.3.2)&quot;&gt;&lt;span class=&quot;xref std std-doc&quot;&gt;Our configuration documentation&lt;/span&gt;&lt;/a&gt;
+contains a simple example:&lt;/p&gt;
+&lt;div class=&quot;highlight-yaml notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;l l-Scalar l-Scalar-Plain&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Set the version of Python and other tools you might need&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;l l-Scalar l-Scalar-Plain&quot;&gt;ubuntu-20.04&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;tools&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;python&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;3.9&amp;quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# You can also specify other tool versions:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# nodejs: &amp;quot;16&amp;quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# rust: &amp;quot;1.55&amp;quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# golang: &amp;quot;1.17&amp;quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;And you can draw inspiration from some community projects
+that are using this feature already:&lt;/p&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://cryptography.io/&quot;&gt;cryptography&lt;/a&gt;, the reference Python library for cryptographic algorithms,
+can now &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/pyca/cryptography/blob/c3fcc6759a86bbd847e3da067152ee7d2b88c194/.readthedocs.yml#L10-L15&quot;&gt;specify the Rust version required to build the
+package&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://parsel.readthedocs.io/&quot;&gt;parsel&lt;/a&gt;, a Python library to manipulate HTML and XML using XPath and CSS selectors,
+leverages the new specification to &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/scrapy/parsel/blob/eb4657934cddb8b44726cda7893852c925bcda3a/.readthedocs.yml#L6-L11&quot;&gt;build their documentation on the just released
+Python 3.10&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://thebe.readthedocs.io/&quot;&gt;Thebe&lt;/a&gt;, a Jupyter-powered tool to make HTML pages interactive,
+&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/executablebooks/thebe/pull/472&quot;&gt;needs Node.js to build the latest version of the code&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Do you think this feature will be useful for you as well?
+Give it a try and let us know.&lt;/p&gt;
+&lt;p&gt;Remember you can always see the latest changes to our platforms in our &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/page/changelog.html&quot;&gt;Read the Docs
+Changelog&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;—&lt;/p&gt;
+&lt;p&gt;Considering using Read the Docs for your next Sphinx or MkDocs project?
+Check out &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/&quot;&gt;our documentation&lt;/a&gt; to get started!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry xml:base="https://chepo92.github.io/read-the-docs-blog/archive/author/juan-luis-cano-rodriguez/atom.xml">
+    <title type="text">Read the Docs newsletter - October 2021</title>
+    <id>https://chepo92.github.io/read-the-docs-blog/newsletter-october-2021.html</id>
+    <updated>2021-10-07T00:00:00Z</updated>
+    <published>2021-10-07T00:00:00Z</published>
+    <link href="https://chepo92.github.io/read-the-docs-blog/newsletter-october-2021.html" />
+    <author>
+      <name>Juan Luis Cano Rodríguez</name>
+    </author>
+    <content type="html">&lt;div class=&quot;section&quot; id=&quot;read-the-docs-newsletter-october-2021&quot;&gt;
+
+&lt;p&gt;Welcome to the latest edition of our monthly newsletter, where we
+share the most relevant updates around Read the Docs,
+offer a summary of new features we shipped
+during the previous month,
+and share what we’ll be focusing on in the near future.&lt;/p&gt;
+&lt;div class=&quot;section&quot; id=&quot;company-highlights&quot;&gt;
+&lt;h2&gt;Company highlights&lt;/h2&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;We have resumed sending our blog updates by email.
+You can &lt;a class=&quot;reference external&quot; href=&quot;https://landing.mailerlite.com/webforms/landing/p8b7z2&quot;&gt;subscribe to our newsletter&lt;/a&gt;
+so you don’t miss them.&lt;/li&gt;
+&lt;li&gt;Version 3 of our Embed API is now implemented,
+thanks to &lt;a class=&quot;reference internal&quot; href=&quot;../../czi-grant-announcement.html&quot;&gt;&lt;span class=&quot;doc&quot;&gt;the CZI grant we received&lt;/span&gt;&lt;/a&gt;.
+We will give more details about it soon.&lt;/li&gt;
+&lt;li&gt;We have reworked &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/team.html&quot; title=&quot;(in Read the Docs user documentation v6.3.2)&quot;&gt;&lt;span class=&quot;xref std std-doc&quot;&gt;our team page&lt;/span&gt;&lt;/a&gt;
+to give you a better idea of who we are and how we work at the company.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;new-features&quot;&gt;
+&lt;h2&gt;New features&lt;/h2&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;You can now use &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/config-file/v2.html#build&quot; title=&quot;(in Read the Docs user documentation v6.3.2)&quot;&gt;&lt;span class=&quot;xref std std-ref&quot;&gt;our newer build specification&lt;/span&gt;&lt;/a&gt;
+that leverages a newer image based on Ubuntu 20.04
+and gives more control over the versions of
+Python, Node.js, Rust, and Go.
+Projects like &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/pyca/cryptography/pull/6330&quot;&gt;pypa/cryptography&lt;/a&gt;
+and &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/executablebooks/thebe/pull/472&quot;&gt;thebe&lt;/a&gt;
+are already using it,
+and we will make an announcement with more information soon.&lt;/li&gt;
+&lt;li&gt;We have added a new section to our Dashboard that exposes user security logs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;figure align-center&quot; id=&quot;id1&quot;&gt;
+&lt;img alt=&quot;Security logs&quot; src=&quot;../../_images/security-log.png&quot; style=&quot;width: 80%;&quot; /&gt;
+&lt;p class=&quot;caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;Security logs&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;We have added a button on the Analytics section to download all your data,
+so you are not limited by the last 30 days that we show.&lt;/li&gt;
+&lt;li&gt;We have revamped our onboarding process.
+If you are new to Read the Docs, you can now
+&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/readthedocs/tutorial-template&quot;&gt;fork our template repository&lt;/a&gt;
+and follow &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/tutorial/index.html&quot; title=&quot;(in Read the Docs user documentation v6.3.2)&quot;&gt;&lt;span class=&quot;xref std std-doc&quot;&gt;our tutorial&lt;/span&gt;&lt;/a&gt;
+to learn how to use the platform.
+We plan to keep expanding the tutorial during the coming weeks.&lt;/li&gt;
+&lt;li&gt;We have made &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/guides/index.html&quot; title=&quot;(in Read the Docs user documentation v6.3.2)&quot;&gt;&lt;span class=&quot;xref std std-doc&quot;&gt;our how-to guides&lt;/span&gt;&lt;/a&gt; more visible
+and simplified its categorization, in addition to other documentation improvements.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Thanks to our external contributors &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/pzhlkj6612&quot;&gt;Mozi&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/mitya57&quot;&gt;Dmitry&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can always see the latest changes to our platforms in our &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/changelog.html&quot; title=&quot;(in Read the Docs user documentation v6.3.2)&quot;&gt;&lt;span class=&quot;xref std std-doc&quot;&gt;Read the Docs
+Changelog&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;upcoming-features&quot;&gt;
+&lt;h2&gt;Upcoming features&lt;/h2&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/nienn&quot;&gt;Ana&lt;/a&gt; will work on the UI of our landing and marketing pages,
+while making progress with version 1.1 of our Sphinx theme.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/agjohnson&quot;&gt;Anthony&lt;/a&gt; will resume work on our new product interface
+and wrap up some financial updates.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/ericholscher&quot;&gt;Eric&lt;/a&gt; will focus on expanding our CDN functionality on the commercial site,
+as well as addressing some upcoming changes to how custom domains work on Read the Docs Community.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/astrojuanlu&quot;&gt;Juan Luis&lt;/a&gt; will document several recent changes,
+such us the new build specification and our support for generic webhooks,
+and continue expanding our tutorial and improving the SEO of our docs.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/humitos&quot;&gt;Manuel&lt;/a&gt; will finish the migration of our services to Ubuntu 20.04,
+release a new version of sphinx-hoverxref that uses our new embed API,
+and gather feedback on our new build specification.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/stsewd&quot;&gt;Santos&lt;/a&gt; will continue consolidating our Community and Commercial codebases,
+finish the work on generic webbooks for easier integration with Slack and other tools,
+enable Commercial users to create new subscriptions after they cancel,
+and collaborate with &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/ericholscher&quot;&gt;Eric&lt;/a&gt; on the CDN issues.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;possible-issues&quot;&gt;
+&lt;h2&gt;Possible issues&lt;/h2&gt;
+&lt;p&gt;We are detecting an increasing number of spammy projects on our platform.
+While this rarely affects legitimate users, it is still a concern to us
+and we are planning to take measures to tackle it.&lt;/p&gt;
+&lt;p&gt;In addition, some projects experienced networking issues due to
+&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/readthedocs/readthedocs.org/issues/8555&quot;&gt;the expiration of Let’s Encrypt root certificate&lt;/a&gt;.
+We deployed a fix shortly after the problem was reported.&lt;/p&gt;
+&lt;hr class=&quot;docutils&quot; /&gt;
+&lt;p&gt;Considering using Read the Docs for your next Sphinx or MkDocs project?
+Check out &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/&quot;&gt;our documentation&lt;/a&gt; to get started!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry xml:base="https://chepo92.github.io/read-the-docs-blog/archive/author/juan-luis-cano-rodriguez/atom.xml">
+    <title type="text">Read the Docs newsletter - September 2021</title>
+    <id>https://chepo92.github.io/read-the-docs-blog/newsletter-september-2021.html</id>
+    <updated>2021-09-02T00:00:00Z</updated>
+    <published>2021-09-02T00:00:00Z</published>
+    <link href="https://chepo92.github.io/read-the-docs-blog/newsletter-september-2021.html" />
+    <author>
+      <name>Juan Luis Cano Rodríguez</name>
+    </author>
+    <content type="html">&lt;div class=&quot;section&quot; id=&quot;read-the-docs-newsletter-september-2021&quot;&gt;
+
+&lt;p&gt;Welcome to the latest edition of our monthly newsletter, where we
+share the most relevant updates around Read the Docs,
+offer a summary of new features we shipped
+during the previous month,
+and share what we’ll be focusing on in the near future.&lt;/p&gt;
+&lt;div class=&quot;section&quot; id=&quot;company-highlights&quot;&gt;
+&lt;h2&gt;Company highlights&lt;/h2&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;We have published
+&lt;a class=&quot;reference internal&quot; href=&quot;../../theme-release-100rc1.html&quot;&gt;&lt;span class=&quot;doc&quot;&gt;the first release candidate of version 1.0.0 of our Sphinx theme&lt;/span&gt;&lt;/a&gt;,
+which adds support for recent versions of Sphinx and docutils among other things,
+and announced our future plans for it.
+Check out the linked blog post to know more.
+&lt;strong&gt;Update&lt;/strong&gt;: We have released 1.0 to PyPI&lt;/li&gt;
+&lt;li&gt;The &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/tutorial/index.html&quot; title=&quot;(in Read the Docs user documentation v6.3.2)&quot;&gt;&lt;span class=&quot;xref std std-doc&quot;&gt;first part of the new Read the Docs tutorial&lt;/span&gt;&lt;/a&gt;,
+which we wrote as part of &lt;a class=&quot;reference internal&quot; href=&quot;../../czi-grant-announcement.html&quot;&gt;&lt;span class=&quot;doc&quot;&gt;our CZI grant&lt;/span&gt;&lt;/a&gt;, is online!
+We hope that it serves as a better starting point for people seeking to learn how to use our platform.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;new-features&quot;&gt;
+&lt;h2&gt;New features&lt;/h2&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;Commercial users can now &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/commercial/sharing.html&quot;&gt;share specific versions of their
+projects&lt;/a&gt;
+and &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/versions.html#logging-out&quot;&gt;log out from the flyout
+menu&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;We added the possibility for users to &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/readthedocs/readthedocs.org/pull/8384&quot;&gt;remove themselves from a
+project&lt;/a&gt;
+without having to ask an owner to remove them
+(as long as they are not the only owner of the project).&lt;/li&gt;
+&lt;li&gt;We fixed &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/readthedocs/readthedocs-sphinx-search/pull/93&quot;&gt;a small usability issue with our search-as-you-type
+box&lt;/a&gt;,
+that ignored the first typed characters under certain circumstances.&lt;/li&gt;
+&lt;li&gt;We have documented our &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/readthedocs/readthedocs.org/pull/8402&quot;&gt;unofficial support for
+Gitea&lt;/a&gt;,
+and made other minor documentation fixes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Thanks to our external contributors &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/pzhlkj6612&quot;&gt;Mozi&lt;/a&gt;, &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/saadmk11&quot;&gt;Maksudul Haque&lt;/a&gt;,
+&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/steko&quot;&gt;Stefano Costa&lt;/a&gt;, and &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/cclauss&quot;&gt;Christian Clauss&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can always see the latest changes to our platforms in our &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/page/changelog.html&quot;&gt;Read the Docs
+Changelog&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;upcoming-features&quot;&gt;
+&lt;h2&gt;Upcoming features&lt;/h2&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/nienn&quot;&gt;Ana&lt;/a&gt; will continue researching tools for conducting automated testing on our Sphinx theme,
+review pull requests corresponding to the 1.1 milestone,
+and make some small styling improvements to our documentation.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/agjohnson&quot;&gt;Anthony&lt;/a&gt; will work with &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/nienn&quot;&gt;Ana&lt;/a&gt; on testing our Sphinx theme,
+in addition to resuming work on our new user interface
+and doing some financial updates.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/ericholscher&quot;&gt;Eric&lt;/a&gt; will keep pushing updates on our Commercial landing page
+and continue working on our sales processes. He’s also
+working to continue building EthicalAds as well.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/astrojuanlu&quot;&gt;Juan Luis&lt;/a&gt; will continue working on our Read the Docs tutorial,
+improving our onboarding experience,
+and put our email marketing and on-site notifications to work.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/humitos&quot;&gt;Manuel&lt;/a&gt; will finish the work on our new Docker images and build process,
+and keep designing our upcoming GitHub Application.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/stsewd&quot;&gt;Santos&lt;/a&gt; will implement a new Slack integration,
+work with &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/humitos&quot;&gt;Manuel&lt;/a&gt; on the GitHub Application,
+and build a user interface for audit tracking.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;possible-issues&quot;&gt;
+&lt;h2&gt;Possible issues&lt;/h2&gt;
+&lt;p&gt;We have been &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/readthedocs/readthedocs.org/pull/8304&quot;&gt;making changes to how we store cookies&lt;/a&gt;
+to make our site more secure.
+This has caused some minor issues in certain web browsers
+or to &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/readthedocs/readthedocs.org/pull/8422&quot;&gt;users that were embedding private documentation pages inside an
+iframe&lt;/a&gt;.&lt;/p&gt;
+&lt;hr class=&quot;docutils&quot; /&gt;
+&lt;p&gt;Considering using Read the Docs for your next Sphinx or MkDocs project?
+Check out &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/&quot;&gt;our documentation&lt;/a&gt; to get started!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry xml:base="https://chepo92.github.io/read-the-docs-blog/archive/author/juan-luis-cano-rodriguez/atom.xml">
+    <title type="text">Read the Docs newsletter - August 2021</title>
+    <id>https://chepo92.github.io/read-the-docs-blog/newsletter-august-2021.html</id>
+    <updated>2021-08-09T00:00:00Z</updated>
+    <published>2021-08-09T00:00:00Z</published>
+    <link href="https://chepo92.github.io/read-the-docs-blog/newsletter-august-2021.html" />
+    <author>
+      <name>Juan Luis Cano Rodríguez</name>
+    </author>
+    <content type="html">&lt;div class=&quot;section&quot; id=&quot;read-the-docs-newsletter-august-2021&quot;&gt;
+
+&lt;p&gt;Welcome to the latest edition of our monthly newsletter, where we
+share the most relevant updates around Read the Docs,
+offer a summary of new features we shipped
+during the previous month,
+and share what we’ll be focusing on in the near future.&lt;/p&gt;
+&lt;div class=&quot;section&quot; id=&quot;company-highlights&quot;&gt;
+&lt;h2&gt;Company highlights&lt;/h2&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;We have a new team member! &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/nienn&quot;&gt;Ana&lt;/a&gt; just joined us as Frontend Developer
+in the context of &lt;a class=&quot;reference internal&quot; href=&quot;../../czi-grant-announcement.html&quot;&gt;&lt;span class=&quot;doc&quot;&gt;the CZI grant we were awarded&lt;/span&gt;&lt;/a&gt;
+to work on our JavaScript documentation embedding client
+and the Read the Docs redesign and UX.&lt;/li&gt;
+&lt;li&gt;The first version of &lt;a class=&quot;reference external&quot; href=&quot;https://www.sphinx-doc.org/en/master/tutorial/&quot;&gt;the tutorial we contributed to the official
+Sphinx documentation&lt;/a&gt; is online,
+as part of the new Sphinx 4.1 releases, and we are already working on expanding it.
+We thank the Sphinx maintainers for the thorough reviews
+and CZI for making it possible.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/readthedocs/readthedocs.org/pull/8355/&quot;&gt;We are now tracking changes in our
+database&lt;/a&gt;,
+which will help us with support issues and additional auditing features on Read the Docs for Business.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;new-features&quot;&gt;
+&lt;h2&gt;New features&lt;/h2&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;We added support for Python 3.10b4 in our &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;testing&lt;/span&gt;&lt;/code&gt; Docker images!
+&lt;a class=&quot;reference external&quot; href=&quot;https://www.python.org/dev/peps/pep-0619/&quot;&gt;The final 3.10.0 release will be in October&lt;/a&gt;,
+but you can already test a development version.&lt;/li&gt;
+&lt;li&gt;Our commercial site &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/versions.html#privacy-levels&quot;&gt;now allows pull request previews to be public rather than private
+only&lt;/a&gt;,
+and &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/pull-requests.html#privacy-levels&quot;&gt;to control the privacy level of pull request
+builds&lt;/a&gt;
+as well. As a result, we have dropped privacy levels for projects on our community site,
+since they used to be a source of confusion.&lt;/li&gt;
+&lt;li&gt;We released &lt;a class=&quot;reference external&quot; href=&quot;https://pypi.org/project/sphinx-hoverxref/0.7b1/&quot;&gt;sphinx-hoverxref 0.7b1&lt;/a&gt;,
+which adds compatibility with Sphinx 4.1.&lt;/li&gt;
+&lt;li&gt;We fixed a long-standing usability issue in both our community and commercial sites:
+notifications now have a close button.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;figure align-center&quot; id=&quot;id1&quot;&gt;
+&lt;img alt=&quot;Button to close notifications&quot; src=&quot;../../_images/close-notifications-org.png&quot; style=&quot;width: 80%;&quot; /&gt;
+&lt;p class=&quot;caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;Button to close notifications&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;You can always see the latest changes to our platforms in our &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/page/changelog.html&quot;&gt;Read the Docs
+Changelog&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;upcoming-features&quot;&gt;
+&lt;h2&gt;Upcoming features&lt;/h2&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/nienn&quot;&gt;Ana&lt;/a&gt;, our new hire, will spend some time getting familiarized with our
+development practices and tools, and perform some quality assurance on
+&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/readthedocs/sphinx_rtd_theme/milestone/6&quot;&gt;the upcoming new version of our Sphinx
+theme&lt;/a&gt;
+along with &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/agjohnson&quot;&gt;Anthony&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/agjohnson&quot;&gt;Anthony&lt;/a&gt; will work on onboarding &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/nienn&quot;&gt;Ana&lt;/a&gt;, release a first release candidate
+of version 1.0 of our Sphinx theme, and some finance work.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/ericholscher&quot;&gt;Eric&lt;/a&gt; will continue overseeing the implementation of the next stages of
+our audit tracking along with &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/stsewd&quot;&gt;Santos&lt;/a&gt;, doing code review, and improving
+our sales &amp;amp; marketing processes.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/astrojuanlu&quot;&gt;Juan Luis&lt;/a&gt; will expand the Sphinx tutorial while doing basic
+bug triaging for the project, and start with a much needed tutorial for
+Read the Docs itself.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/humitos&quot;&gt;Manuel&lt;/a&gt; will keep working on our Embed API version 3, push the final
+tweaks needed to support Python 3.10 along with &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/stsewd&quot;&gt;Santos&lt;/a&gt;,
+and continue improving our deployment processes.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/stsewd&quot;&gt;Santos&lt;/a&gt; will continue with the implementation of our audit tracking,
+inform our users about the upcoming changes in privacy levels on our
+community site, and wrap up the work around sharing specific
+versions of commercial projects.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;possible-issues&quot;&gt;
+&lt;h2&gt;Possible issues&lt;/h2&gt;
+&lt;p&gt;Projects that were using Git LFS on our site noticed that &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/readthedocs/readthedocs.org/issues/8288&quot;&gt;it stopped working
+at the end of June&lt;/a&gt;.
+Even though it is not officially supported from our side,
+we wanted to make it work again,
+but it took several days to understand what was happening.&lt;/p&gt;
+&lt;hr class=&quot;docutils&quot; /&gt;
+&lt;p&gt;Considering using Read the Docs for your next Sphinx or MkDocs project?
+Check out &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/&quot;&gt;our documentation&lt;/a&gt; to get started!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry xml:base="https://chepo92.github.io/read-the-docs-blog/archive/author/juan-luis-cano-rodriguez/atom.xml">
+    <title type="text">Read the Docs newsletter - July 2021</title>
+    <id>https://chepo92.github.io/read-the-docs-blog/newsletter-july-2021.html</id>
+    <updated>2021-07-08T00:00:00Z</updated>
+    <published>2021-07-08T00:00:00Z</published>
+    <link href="https://chepo92.github.io/read-the-docs-blog/newsletter-july-2021.html" />
+    <author>
+      <name>Juan Luis Cano Rodríguez</name>
+    </author>
+    <content type="html">&lt;div class=&quot;section&quot; id=&quot;read-the-docs-newsletter-july-2021&quot;&gt;
+
+&lt;p&gt;Welcome to a new edition of our monthly newsletter, where we
+share the most relevant updates around Read the Docs,
+offer a summary of new features we shipped
+during the previous month,
+and share what we’ll be focusing on in the near future.&lt;/p&gt;
+&lt;div class=&quot;section&quot; id=&quot;company-highlights&quot;&gt;
+&lt;h2&gt;Company highlights&lt;/h2&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/ericholscher&quot;&gt;Eric&lt;/a&gt; presented the history of the company at the Upstream 2021 conference
+along with ideas for open source sustainability.
+You can read more about it in &lt;a class=&quot;reference internal&quot; href=&quot;../../behind-the-scenes-2021-1.html&quot;&gt;&lt;span class=&quot;doc&quot;&gt;our recent blog post&lt;/span&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;We revamped our &lt;a class=&quot;reference external&quot; href=&quot;https://readthedocs.org/sustainability/&quot;&gt;sustainability page&lt;/a&gt;
+to clarify the ways in which you or your project can go ad-free.&lt;/li&gt;
+&lt;li&gt;The first two parts of the Sphinx tutorial we are writing
+in the context of the &lt;a class=&quot;reference internal&quot; href=&quot;../../czi-grant-announcement.html&quot;&gt;&lt;span class=&quot;doc&quot;&gt;CZI grant&lt;/span&gt;&lt;/a&gt;
+were merged to the development branch,
+and will be publicly available soon in the official Sphinx documentation.&lt;/li&gt;
+&lt;li&gt;We finalized the design of our upcoming
+&lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/development/design/embed-api.html&quot;&gt;Embed API v3&lt;/a&gt;,
+which will open up more possibilities of embedding content inside and outside Read the Docs.
+Watch this space for updates on the topic.&lt;/li&gt;
+&lt;li&gt;One extra person will join our team as Frontend Developer.
+More details coming soon!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;new-features&quot;&gt;
+&lt;h2&gt;New features&lt;/h2&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;We added a new functionality to rebuild a specific PR build.
+A small user experience improvement that we hope is useful to many of our users
+(see image below).&lt;/li&gt;
+&lt;li&gt;We added a JSON schema of our configuration file to
+&lt;a class=&quot;reference external&quot; href=&quot;https://www.schemastore.org/json/&quot;&gt;JSON Schema Store&lt;/a&gt;.
+If your editor has support for JSON schema,
+it will now give you autocompletion and linting for
+&lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/en/stable/config-file/v2.html&quot;&gt;our .readthedocs.yml&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;figure align-center&quot; id=&quot;id1&quot;&gt;
+&lt;img alt=&quot;Link to rebuild a specific build&quot; src=&quot;../../_images/rebuild.png&quot; style=&quot;width: 80%;&quot; /&gt;
+&lt;p class=&quot;caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;Link to rebuild a specific build&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Thanks to our external contributors &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/mongolsteppe&quot;&gt;&amp;#64;mongolsteppe&lt;/a&gt;, &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/The-Compiler&quot;&gt;Florian Bruhin&lt;/a&gt;,
+&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/SethFalco&quot;&gt;Seth Falco&lt;/a&gt;, &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/akien-mga&quot;&gt;Rémi Verschelde&lt;/a&gt;, &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/choldgraf&quot;&gt;Chris Holdgraf&lt;/a&gt;, and &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/saadmk11&quot;&gt;Maksudul Haque&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can always see the latest changes to our platforms in our &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/page/changelog.html&quot;&gt;Read the Docs
+Changelog&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;upcoming-features&quot;&gt;
+&lt;h2&gt;Upcoming features&lt;/h2&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/agjohnson&quot;&gt;Anthony&lt;/a&gt; will focus on getting our Sphinx theme to support Sphinx 4.0
+along with our external contributor &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/blendify&quot;&gt;Aaron Carlisle&lt;/a&gt;,
+finishing up the financial summary of 2020,
+and onboarding our new Frontend hire.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/ericholscher&quot;&gt;Eric&lt;/a&gt; will continue working on our sales process
+and doing pull request reviews,
+along with managing other ongoing projects.
+In addition, he will push forward the proposal to add audit tracking
+along with &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/humitos&quot;&gt;Manuel&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/astrojuanlu&quot;&gt;Juan Luis&lt;/a&gt; is now collaborating more closely with the Sphinx team
+and will submit the third part of our beginners tutorial.
+In addition, he will lead a documentation sprint at SciPy,
+and start working on an introductory tutorial for Read the Docs.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/humitos&quot;&gt;Manuel&lt;/a&gt; has already started with the implementation of our Embed API v3
+and will continue working on it for the coming weeks,
+apart from improving our data backups
+and implementing the first pieces of our audit tracking.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/stsewd&quot;&gt;Santos&lt;/a&gt; will keep on working with the refactoring of our codebases
+so our commercial and community sites are easier to maintain.
+He will also write a new guide about how to use unsupported VCS platforms
+on Read the Docs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;possible-issues&quot;&gt;
+&lt;h2&gt;Possible issues&lt;/h2&gt;
+&lt;p&gt;Our release from June 15th contains &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/readthedocs/readthedocs.org/security/advisories/GHSA-3v5m-qmm9-3c6c&quot;&gt;a security advisory to our CSRF
+settings&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;On an unrelated note, we are receiving more support requests from our users
+about some software versions in our Docker images,
+and we have decided to give that work more priority.&lt;/p&gt;
+&lt;hr class=&quot;docutils&quot; /&gt;
+&lt;p&gt;Considering using Read the Docs for your next Sphinx or MkDocs project?
+Check out &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/&quot;&gt;our documentation&lt;/a&gt; to get started!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry xml:base="https://chepo92.github.io/read-the-docs-blog/archive/author/juan-luis-cano-rodriguez/atom.xml">
+    <title type="text">Early 2021 talks and podcasts from Read the Docs</title>
+    <id>https://chepo92.github.io/read-the-docs-blog/behind-the-scenes-2021-1.html</id>
+    <updated>2021-07-06T00:00:00Z</updated>
+    <published>2021-07-06T00:00:00Z</published>
+    <link href="https://chepo92.github.io/read-the-docs-blog/behind-the-scenes-2021-1.html" />
+    <author>
+      <name>Juan Luis Cano Rodríguez</name>
+    </author>
+    <content type="html">&lt;div class=&quot;section&quot; id=&quot;early-2021-talks-and-podcasts-from-read-the-docs&quot;&gt;
+
+&lt;p&gt;During the first half of 2021 several team members of Read the Docs
+have talked about the company in podcasts and online events.
+If you want to learn more about our company
+directly from the people that are a core part of it,
+and hear our thoughts on other topics
+like open source sustainability and developer advocacy,
+this blog post is for you.&lt;/p&gt;
+&lt;div class=&quot;section&quot; id=&quot;eric-sustain-podcast&quot;&gt;
+&lt;h2&gt;Eric &amp;#64; Sustain podcast&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/ericholscher&quot;&gt;Eric&lt;/a&gt; was the special guest of &lt;a class=&quot;reference external&quot; href=&quot;https://podcast.sustainoss.org/&quot;&gt;Sustain&lt;/a&gt; back in February,
+“a podcast about sustaining open source in the long haul”.
+Eric started by telling the story of how he and &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/agjohnson&quot;&gt;Anthony&lt;/a&gt; co-founded Read the Docs,
+talked about the &lt;a class=&quot;reference external&quot; href=&quot;https://www.writethedocs.org/&quot;&gt;Write the Docs&lt;/a&gt; community,
+described the challenges of launching &lt;a class=&quot;reference external&quot; href=&quot;https://www.ethicalads.io/&quot;&gt;EthicalAds&lt;/a&gt; in 2020,
+and discussed the opportunities of using ethical advertising to fund open source projects.&lt;/p&gt;
+&lt;p&gt;Listen to Eric online:&lt;/p&gt;
+&lt;a class=&quot;reference external image-reference&quot; href=&quot;https://podcast.sustainoss.org/66&quot;&gt;&lt;img alt=&quot;../../_images/eric-sustain.png&quot; class=&quot;align-center&quot; src=&quot;../../_images/eric-sustain.png&quot; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;juan-luis-data-for-future-podcast&quot;&gt;
+&lt;h2&gt;Juan Luis &amp;#64; Data for Future podcast&lt;/h2&gt;
+&lt;p&gt;Also in June, &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/astrojuanlu&quot;&gt;Juan Luis&lt;/a&gt; was invited for the second time
+to &lt;a class=&quot;reference external&quot; href=&quot;https://dataforfuture.org/&quot;&gt;Data for Future&lt;/a&gt;,
+a podcast that seeks to “inspire positive actions
+towards an environmentally sustainable and socially just future through technology”.
+In an informal conversation,
+Juan Luis shared some numbers about the state of software documentation according to several surveys,
+promoted the &lt;a class=&quot;reference external&quot; href=&quot;https://diataxis.fr/&quot;&gt;Diátaxis&lt;/a&gt; documentation framework created by Daniele Procida,
+discussed his role as Developer Advocate at Read the Docs,
+and shared some possible opportunities for collaboration
+between Data Science practitioners and technical writers.&lt;/p&gt;
+&lt;p&gt;Listen to Juan Luis online:&lt;/p&gt;
+&lt;a class=&quot;reference external image-reference&quot; href=&quot;https://dataforfuture.org/episodes/39-making-documentation-sexy-juan-luis-cano-read-the-docs/&quot;&gt;&lt;img alt=&quot;../../_images/juan-luis-data-for-future.png&quot; class=&quot;align-center&quot; src=&quot;../../_images/juan-luis-data-for-future.png&quot; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;eric-upstream-2021-online-conference&quot;&gt;
+&lt;h2&gt;Eric &amp;#64; Upstream 2021 online conference&lt;/h2&gt;
+&lt;p&gt;Read the Docs and EthicalAds supported &lt;a class=&quot;reference external&quot; href=&quot;https://upstream.live/&quot;&gt;Upstream 2021&lt;/a&gt; in June,
+a one-day online event about “open source, the developers who use it, and the maintainers who make it”.
+&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/ericholscher&quot;&gt;Eric&lt;/a&gt; delivered a talk titled &lt;a class=&quot;reference external&quot; href=&quot;https://explore.tidelift.com/upstream/main/session-eric-holscher&quot;&gt;“Bootstrapping a sustainable open source project: The Read the Docs story”&lt;/a&gt;,
+in which he dived into some of the less known details of how Read the Docs was created,
+shared the different funding strategies the company attempted over the years,
+opened up about the dangers of burnout,
+and detailed the different commercial plans of Read the Docs
+as well as some thoughts about pricing schemes.&lt;/p&gt;
+&lt;p&gt;Watch Eric online:&lt;/p&gt;
+&lt;a class=&quot;reference external image-reference&quot; href=&quot;https://explore.tidelift.com/upstream/main/session-eric-holscher&quot;&gt;&lt;img alt=&quot;../../_images/eric-upstream.png&quot; class=&quot;align-center&quot; src=&quot;../../_images/eric-upstream.png&quot; /&gt;&lt;/a&gt;
+&lt;hr class=&quot;docutils&quot; /&gt;
+&lt;p&gt;Considering using Read the Docs for your next Sphinx or MkDocs project?
+Check out &lt;a class=&quot;reference external&quot; href=&quot;https://docs.readthedocs.io/&quot;&gt;our documentation&lt;/a&gt; to get started!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+</feed>

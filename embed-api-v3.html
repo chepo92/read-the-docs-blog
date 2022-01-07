@@ -1,0 +1,423 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta content="We are thrilled to announce the availability of Read the Docs Embed API v3, along with its official client, sphinx-hoverxref 1.0. We invite the community to try them out and let us know their feedback." lang="en" name="description" />
+
+  <meta property="og:title" content="Announcing Embed API v3 and sphinx-hoverxref 1.0" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="embed-api-v3.html" />
+  <meta property="og:site_name" content="Read the Docs Blog" />
+  <meta property="og:description" content="We are thrilled to announce the availability of Read the Docs Embed API v3, along with its official client, sphinx-hoverxref 1.0. This work has been possible in part thanks to the the CZI grant we ..." />
+  <meta property="og:image" content="https://blog.readthedocs.com/_static/logo-opengraph.png" />
+  <meta property="og:image:alt" content="Read the Docs Blog" />
+  <meta name="twitter:card" content="summary_large_image" />
+    <title>Announcing Embed API v3 and sphinx-hoverxref 1.0 &#8212; BioCurious DIY BioPrinting Blog</title>
+    <link rel="stylesheet" href="_static/main.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  
+  <link href='//fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css' />
+  <link href='//fonts.googleapis.com/css?family=Puritan:400,400italic,700,700italic' rel='stylesheet' type='text/css' />
+  <link rel="stylesheet" href="_static/local.css" type="text/css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer data-domain="blog.readthedocs.com" src="https://plausible.io/js/plausible.js"></script>
+
+  
+  <link rel="alternate" type="application/atom+xml"  href="archive/atom.xml" title="Read the Docs Blog">
+  
+  
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+  
+  <style type="text/css">
+    ul.ablog-archive {list-style: none; overflow: auto; margin-left: 0px}
+    ul.ablog-archive li {float: left; margin-right: 5px; font-size: 80%}
+    ul.postlist a {font-style: italic;}
+    ul.postlist-style-disc {list-style-type: disc;}
+    ul.postlist-style-none {list-style-type: none;}
+    ul.postlist-style-circle {list-style-type: circle;}
+  </style>
+
+  </head><body>
+  <!-- BEGIN header -->
+  <div id="header">
+    <div class="row">
+      <div class="logo">
+        <h1><a href="index.html">
+            <img src="_static/logo.png" height="48" />
+            Read the Docs Blog
+        </a></h1>
+      </div>
+      <div class="nav">
+        <ul>
+          <li><a href="https://readthedocs.com">Back to site</a></li>
+          <li><a href="mailto:hello@readthedocs.com">Contact&nbsp;Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- END header -->
+
+  <div id="content">
+    <div class="wrapper">
+
+      <div class="col-major content">
+          
+  <div class="section" id="announcing-embed-api-v3-and-sphinx-hoverxref-1-0">
+<h1>Announcing Embed API v3 and sphinx-hoverxref 1.0<a class="headerlink" href="#announcing-embed-api-v3-and-sphinx-hoverxref-1-0" title="Permalink to this headline">¶</a></h1>
+<p>We are thrilled to announce the availability of Read the Docs Embed API v3,
+along with its official client, sphinx-hoverxref 1.0.
+This work has been possible in part thanks to the
+<a class="reference internal" href="czi-grant-announcement.html"><span class="doc">the CZI grant we received</span></a>.</p>
+<div class="section" id="the-value-of-content-embedding">
+<h2>The value of content embedding<a class="headerlink" href="#the-value-of-content-embedding" title="Permalink to this headline">¶</a></h2>
+<p>As we wrote in
+<a class="reference internal" href="hoverxref-intersphinx.html"><span class="doc">our first blog post about sphinx-hoverxref</span></a>,
+one of the most powerful features of Sphinx
+is the possibility of creating cross references
+to other documentation projects.
+However, a reader finding several links in a technical documentation
+might need to open several browser tabs to fully understand the context,
+resulting in a lot of friction in the form of context switching.</p>
+<p>One way of mitigating the problem is to show a small preview
+in the form of tooltip or modal with the contents of the link.
+This is where the Embed API and sphinx-hoverxref come in.</p>
+<p><a class="reference external" href="https://sphinx-hoverxref.readthedocs.io/">sphinx-hoverxref</a> is a Sphinx extension that addresses this problem
+by adding tooltips on the cross references of the HTML documentation
+with the content of the linked section.
+To do so, it inserts a small JavaScript file that
+calls the Read the Docs Embed API when the user hovers any link.
+<a class="reference internal" href="hoverxref-intersphinx.html"><span class="doc">Back in June</span></a> we announced
+intersphinx support in <a class="reference external" href="https://sphinx-hoverxref.readthedocs.io/">sphinx-hoverxref</a> 0.6b1,
+which allowed users to include modals and tooltips
+also for cross references to other projects.</p>
+<div class="figure align-center" id="id2">
+<a class="reference external image-reference" href="/_images/sphinx-hoverxref-showcase.gif"><img alt="sphinx-hoverxref displaying tooltips for cross references" src="_images/sphinx-hoverxref-showcase.gif" style="width: 60%;" /></a>
+<p class="caption"><span class="caption-text">sphinx-hoverxref displaying a tooltip including an equation</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>Some big projects already using it include <a class="reference external" href="https://docs.tweepy.org/">Tweepy</a>,
+a Python client for Twitter, and <a class="reference external" href="https://docs.scrapy.org/">Scrapy</a>,
+a framework for crawling websites.</p>
+</div>
+<div class="section" id="embed-api-v3-and-sphinx-hoverxref-1-0">
+<h2>Embed API v3 and sphinx-hoverxref 1.0<a class="headerlink" href="#embed-api-v3-and-sphinx-hoverxref-1-0" title="Permalink to this headline">¶</a></h2>
+<p>After some months of work, <strong>we are excited to publish v3 of our Embed API,
+and with it, version 1.0 of sphinx-hoverxref</strong>.</p>
+<p>Among other things,
+the new versions allow you to
+<a class="reference external" href="https://docs.readthedocs.io/en/stable/guides/embedding-content.html#embedding-content-from-your-documentation" title="(in Read the Docs user documentation v6.3.2)"><span class="xref std std-ref">embed content from pages hosted outside Read the Docs</span></a>.
+For security reasons, we have an allowlist of such external domains
+that currently includes Python, NumPy, SciPy, SymPy,
+and we would like to
+<a class="reference external" href="https://github.com/readthedocs/readthedocs.org/issues">invite the community to suggest more domains to add</a>.</p>
+<p>Other additions and fixes include:</p>
+<ul class="simple">
+<li>Support for JS and CSS assets in Sphinx 4.1+.</li>
+<li>Support for <code class="docutils literal notranslate"><span class="pre">glossary</span></code> / <code class="docutils literal notranslate"><span class="pre">term</span></code> and sphinxcontrib-bibtex.</li>
+<li>Avoid showing the browser built-in tooltip for links that have the extension enabled.</li>
+</ul>
+<p>Finally, version 3 of the Embed API
+paves the way for supporting non-Sphinx projects in the future.</p>
+</div>
+<div class="section" id="embedding-content-with-sphinx-hoverxref">
+<h2>Embedding content with sphinx-hoverxref<a class="headerlink" href="#embedding-content-with-sphinx-hoverxref" title="Permalink to this headline">¶</a></h2>
+<p>To use sphinx-hoverxref in your Read the Docs project,
+<a class="reference external" href="https://docs.readthedocs.io/en/stable/guides/reproducible-builds.html" title="(in Read the Docs user documentation v6.3.2)"><span class="xref std std-doc">declare it as part of your dependencies</span></a>:</p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">requirements.txt</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sphinx</span><span class="o">==</span><span class="mf">4.3.1</span>
+<span class="n">sphinx_rtd_theme</span><span class="o">==</span><span class="mf">1.0.0</span>
+<span class="hll"><span class="n">sphinx</span><span class="o">-</span><span class="n">hoverxref</span><span class="o">==</span><span class="mf">1.0.0</span>
+</span></pre></div>
+</div>
+</div>
+<p>And add it to your list of Sphinx extensions:</p>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">conf.py</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="c1"># ...other extensions</span>
+<span class="hll">    <span class="s2">&quot;hoverxref.extension&quot;</span><span class="p">,</span>
+</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<p>To enable the extension on all <code class="docutils literal notranslate"><span class="pre">:ref:</span></code> of your documentation,
+set the <code class="docutils literal notranslate"><span class="pre">hoverxref_auto_ref</span></code> to <code class="docutils literal notranslate"><span class="pre">True</span></code>:</p>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">conf.py</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">hoverxref_auto_ref</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+<p>And you will start seeing tooltips on your internal references.
+Apart from <code class="docutils literal notranslate"><span class="pre">:ref:</span></code> roles, you can also enable tooltips on:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://sphinx-hoverxref.readthedocs.io/en/stable/usage.html#tooltip-on-sphinx-domains" title="(in sphinx-hoverxref)"><span class="xref std std-ref">Code objects from any Sphinx domain</span></a>,</li>
+<li><a class="reference external" href="https://sphinx-hoverxref.readthedocs.io/en/stable/usage.html#tooltip-on-glossary-terms" title="(in sphinx-hoverxref)"><span class="xref std std-ref">Glossary terms</span></a>,</li>
+<li><a class="reference external" href="https://sphinx-hoverxref.readthedocs.io/en/stable/usage.html#tooltip-on-sphinxcontrib-bibtex-cites" title="(in sphinx-hoverxref)"><span class="xref std std-ref">BibTeX citations</span></a>,</li>
+<li><a class="reference external" href="https://sphinx-hoverxref.readthedocs.io/en/stable/usage.html#tooltip-with-content-that-needs-extra-rendering-steps" title="(in sphinx-hoverxref)"><span class="xref std std-ref">Pages containing extra JavaScript like sphinx-tabs and
+MathJax</span></a>,</li>
+<li><a class="reference external" href="https://sphinx-hoverxref.readthedocs.io/en/stable/usage.html#tooltip-on-intersphinx-content" title="(in sphinx-hoverxref)"><span class="xref std std-ref">Intersphinx references</span></a>,</li>
+<li><a class="reference external" href="https://sphinx-hoverxref.readthedocs.io/en/stable/usage.html#tooltip-on-custom-object" title="(in sphinx-hoverxref)"><span class="xref std std-ref">And custom objects!</span></a></li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">sphinx-hoverxref includes the JavaScript embed client in the HTML assets,
+but it is not yet available as a standalone library that can be reused
+with standard frontend packaging tools.
+If you would like to see this happening,
+<a class="reference external" href="https://github.com/readthedocs/sphinx-hoverxref/issues/">let us know</a>.</p>
+</div>
+</div>
+<div class="section" id="calling-the-embed-api-directly">
+<h2>Calling the Embed API directly<a class="headerlink" href="#calling-the-embed-api-directly" title="Permalink to this headline">¶</a></h2>
+<p>As explained in <a class="reference external" href="https://docs.readthedocs.io/en/stable/guides/embedding-content.html#calling-the-embed-api-directly" title="(in Read the Docs user documentation v6.3.2)"><span class="xref std std-ref">our embedding
+guide</span></a>,
+you can call the API directly from any HTTP client:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>curl -s <span class="s2">&quot;https://readthedocs.org/api/v3/embed/\</span>
+<span class="gp">&gt; </span><span class="s2">?url=https://docs.readthedocs.io/en/latest/features.html\</span>
+<span class="gp">&gt; </span><span class="s2">%23read-the-docs-features&quot;</span> <span class="p">|</span> python -m json.tool
+<span class="go">{</span>
+<span class="go">  &quot;url&quot;: &quot;https://docs.readthedocs.io/en/latest/features.html#read-the-docs-features&quot;,</span>
+<span class="go">  &quot;fragment&quot;: &quot;read-the-docs-features&quot;,</span>
+<span class="go">  &quot;content&quot;: &quot;&lt;div class=\&quot;section\&quot; id=\&quot;read-the-docs-features\&quot;&gt;\n&lt;h1&gt;Read the Docs ...&quot;,</span>
+<span class="go">  &quot;external&quot;: false</span>
+<span class="go">}</span>
+</pre></div>
+</div>
+<p>Or visually explore the query in the <a class="reference external" href="https://readthedocs.org/api/v3/embed/?url=https://docs.readthedocs.io/en/latest/features.html%23read-the-docs-features">web interface</a> instead.</p>
+<p>The <a class="reference external" href="https://docs.readthedocs.io/en/stable/api/v3.html#embed" title="(in Read the Docs user documentation v6.3.2)"><span class="xref std std-ref">reference documentation</span></a>
+includes more detail about the parameters and return values of the API.</p>
+</div>
+<div class="section" id="try-it-out">
+<h2>Try it out!<a class="headerlink" href="#try-it-out" title="Permalink to this headline">¶</a></h2>
+<p>We would like to invite the community to try out these features and
+send us feedback. With the help of our users, we will keep moving towards
+a more cohesive documentation ecosystem of interlinked Python projects.</p>
+<hr class="docutils" />
+<p>Considering using Read the Docs for your next Sphinx or MkDocs project?
+Check out <a class="reference external" href="https://docs.readthedocs.io/">our documentation</a> to get started!</p>
+</div>
+</div>
+
+  <div class="section">
+  
+    
+  
+  
+  </div>
+
+      </div>
+
+      <div class="col-minor sidebar">
+  
+  
+  <ul class="post-details">
+    <li>
+      
+        <i class="fa-fw fa fa-calendar"></i>
+        07 December 2021
+      
+    </li>
+
+      
+
+  
+  <li id="author"><span><i class="fa-fw fa fa-user"></i></span>
+    
+      
+      <a href="archive/author/juan-luis-cano-rodriguez.html">Juan Luis Cano Rodríguez</a>
+      
+    </li>
+  
+
+  
+  <li id="location"><span><i class="fa-fw fa fa-location-arrow"></i></span>
+    
+      
+      <a href="archive/location/madrid-spain.html">Madrid, Spain</a>
+      
+    </li>
+  
+
+  
+
+  
+
+  
+  <li id="tags"><span><i class="fa-fw fa fa-tags"></i>
+      </span>
+    
+      
+      <a href="archive/tag/api.html">api</a>
+      
+    
+      
+      <a href="archive/tag/feature.html">feature</a>
+      
+    
+      
+      <a href="archive/tag/grant.html">grant</a>
+      
+    </li>
+  
+  
+  </ul>
+
+
+
+<!-- Begin MailerLite Signup Form -->
+  <div id="mlb2-4710274" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-4710274">
+    <div class="ml-form-align-center">
+      <div class="ml-form-embedWrapper embedForm">
+        <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+          <div class="ml-form-embedContent">
+            <h3 style="margin-left: 0">Subscribe to our mailing list</h3>
+            <p>Sign up for our blog and we'll send you news and updates about Sphinx and Read the Docs on a regular basis.</p>
+          </div>
+          <form class="ml-block-form" action="https://static.mailerlite.com/webforms/submit/p8b7z2" data-code="p8b7z2" method="post" target="_blank">
+            <div class="ml-form-formContent">
+              <div class="ml-form-fieldRow ml-last-item">
+                <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                  <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="email address" autocomplete="email" style="width: 90%">
+                </div>
+              </div>
+            </div>
+            <div class="ml-form-embedPermissions">
+              <div class="ml-form-embedPermissionsContent default privacy-policy">
+                <p style="margin-bottom: 0; font-size: 0.8em">You can unsubscribe anytime. For more details, review our <a href="https://docs.readthedocs.io/page/privacy-policy.html" target="_blank">Privacy Policy</a>.</p>
+              </div>
+            </div>
+            <input type="hidden" name="ml-submit" value="1">
+            <div class="ml-form-embedSubmit">
+              <button type="submit" class="primary">Subscribe</button>
+              <button disabled="disabled" style="display:none" type="button" class="loading"> <div class="ml-form-embedSubmitLoad"></div> <span class="sr-only">Loading...</span> </button>
+            </div>
+            <input type="hidden" name="anticsrf" value="true">
+          </form>
+        </div>
+        <div class="ml-form-successBody row-success" style="display:none">
+          <div class="ml-form-successContent">
+            <h4>Thank you!</h4>
+            <p>You have successfully joined our subscriber list.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function ml_webform_success_4710274(){var r=ml_jQuery||jQuery;r(".ml-subscribe-form-4710274 .row-success").show(),r(".ml-subscribe-form-4710274 .row-form").hide()}
+  </script>
+  <img src="https://track.mailerlite.com/webforms/o/4710274/p8b7z2?v1632123501" width="1" height="1" style="max-width:1px;max-height:1px;visibility:hidden;padding:0;margin:0;display:block" alt="." border="0">
+  <script src="https://static.mailerlite.com/js/w/webforms.min.js?v0c75f831c56857441820dcec3163967c" type="text/javascript"></script>
+<!--End mc_embed_signup-->
+
+
+<!-- Jobs 
+<h3> Read the Docs is hiring </h3>
+<ul>
+    <li><a href="https://blog.readthedocs.com/job-frontend/">Front-end Developer</a></li>
+</ul>
+-->
+
+<h3> Follow us </h3>
+
+<ul>
+<li>
+<a href="http://blog.readthedocs.com/archive/atom.xml" rel="me">Atom Feed</a>
+</li>
+<li>
+<a href="https://twitter.com/readthedocs" rel="me">Twitter</a>
+</li>
+</ul>
+
+  <h3><a href="archive.html">Recent Posts</a></h3>
+  <ul>
+    
+    
+      <li><a href="newsletter-december-2021.html">14 December - Read the Docs newsletter - December 2021</a></li>
+    
+      <li><a href="jupyter-book-read-the-docs.html">11 November - Read the Docs ❤️ Jupyter Book</a></li>
+    
+      <li><a href="newsletter-november-2021.html">04 November - Read the Docs newsletter - November 2021</a></li>
+    
+      <li><a href="build-errors-docutils-0-18.html">02 November - Build errors with docutils 0.18</a></li>
+    
+      <li><a href="new-build-specification.html">14 October - Ubuntu 20.04, Python 3.10, and support for Node, Rust, and Go</a></li>
+    
+  </ul>
+
+  <h3><a href="archive/archive.html">Archives</a></h3>
+  <ul>
+  
+    
+    <li><a href="archive/2021.html">2021 (23)</a></li>
+    
+  
+    
+    <li><a href="archive/2020.html">2020 (6)</a></li>
+    
+  
+    
+    <li><a href="archive/2019.html">2019 (15)</a></li>
+    
+  
+    
+    <li><a href="archive/2018.html">2018 (13)</a></li>
+    
+  
+    
+    <li><a href="archive/2017.html">2017 (7)</a></li>
+    
+  
+    
+    <li><a href="archive/2016.html">2016 (5)</a></li>
+    
+  
+    
+    <li><a href="archive/2015.html">2015 (9)</a></li>
+    
+  
+    
+    <li><a href="archive/2014.html">2014 (4)</a></li>
+    
+  
+    
+    <li><a href="archive/2013.html">2013 (2)</a></li>
+    
+  
+  </ul>
+
+        
+      </div>
+    </div>
+  </div>
+  <div id="footer">
+    <div class="row">
+      <div class="col fill">
+        <ul>
+            <li>
+                &copy; Copyright 2021, Read the Docs, Inc.
+            </li>
+
+          <li>
+            Powered by <a href="http://ablog.readthedocs.org">ABlog</a>, and <a href="http://readthedocs.org/">Read the Docs</a>.
+          </li>
+            <li>
+              Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+            </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
