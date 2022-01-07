@@ -1,5 +1,14 @@
+
+github pages hosted blog
+===========================
+
+Implements CI/CD workflow to the default or configured url (eg. https://axel-sepulveda.github.io/blog/) 
+
+
 My own blog
 ==================
+
+Based on 
 
 Read the Docs Blog
 ==================
