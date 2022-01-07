@@ -36,7 +36,7 @@ extensions = [
 ]
 
 blog_title = 'Read the Docs Blog'
-blog_baseurl = 'https://blog.readthedocs.com'
+blog_baseurl = 'https://github.com/Axel-Sepulveda/blog'
 blog_path = 'archive'
 fontawesome_link_cdn = 'https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css'
 # fontawesome_included = True
